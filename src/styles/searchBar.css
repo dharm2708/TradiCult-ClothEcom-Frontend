@@ -1,0 +1,35 @@
+.search-bar-container {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+}
+
+.search-input-wrapper {
+  border: 1px solid;
+  padding: 10px;
+  width: 600px;
+  border-color: #00b5b7;
+  border-radius: 10px;
+}
+
+.search-input-wrapper input {
+  font-size: 15px;
+}
+
+.searchBarIcon {
+  margin-left: 10px;
+  display: block;
+}
+
+/* Responsive rule to hide input on smaller screens */
+@media (max-width: 768px) {
+  .search-input-wrapper input {
+    display: none;
+  }
+
+  /* Optional: shrink the wrapper width if needed */
+  .search-input-wrapper {
+    width: auto;
+    padding: 10px;
+  }
+}

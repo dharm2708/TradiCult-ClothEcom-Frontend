@@ -1,0 +1,204 @@
+.elevated-categories {
+  padding: 5rem 2rem;
+  background: #fff;
+  font-family: "Urbanist", "Poppins", sans-serif;
+}
+
+.elevated-title {
+  font-size: 3.5rem;
+  text-align: center;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 4rem;
+  position: relative;
+  letter-spacing: -1px;
+}
+
+.elevated-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.feature-card {
+  position: relative;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  transition: transform 0.35s ease;
+}
+
+.feature-card:hover {
+  transform: scale(1.02);
+}
+
+.feature-card img.category-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.9);
+  transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+.feature-card:hover img.category-img {
+  filter: brightness(1);
+  transform: scale(1.05);
+}
+
+.card-content {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  padding: 1.2rem 1.8rem;
+  border-radius: 1rem;
+  color: #fff;
+  text-align: left;
+  transition: background 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-content h3 {
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.card-content p {
+  font-size: 1rem;
+  margin-top: 0.4rem;
+  color: #f0f0f0;
+}
+
+/* Layout for right stacked cards */
+.stacked-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.feature-card.large {
+  height: 650px;
+}
+
+.feature-card.small {
+  height: 310px;
+}
+
+/* Responsive */
+@media screen and (max-width: 992px) {
+  .elevated-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .stacked-cards {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+
+  .feature-card.small {
+    flex: 1;
+    height: 5%;
+  }
+
+  .feature-card.large {
+    height: 500px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .elevated-title {
+    font-size: 2.4rem;
+  }
+
+  .card-content {
+    bottom: 1rem;
+    left: 1rem;
+    padding: 1rem 1.4rem;
+  }
+
+  .card-content h3 {
+    font-size: 1.4rem;
+  }
+
+  .card-content p {
+    font-size: 0.9rem;
+  }
+}
+
+.background-container {
+  background: linear-gradient(-45deg, #e0f7fa, #fce4ec, #e8f5e9, #fff3e0);
+  background-size: 400% 400%;
+  animation: gradientFlow 15s ease infinite;
+  padding: 0;
+  margin: 0;
+}
+
+/* Apply it to the whole section */
+.men-categories-section {
+  padding: 100px 40px;
+  background: transparent;
+  position: relative;
+  z-index: 1;
+}
+
+/* Animation Keyframes */
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* 🔮 Wrapper for background blob animation */
+.background-blob-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+/* 🔵 Animated Blobs Container */
+.animated-blobs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at 20% 30%, #b2fefa, transparent 50%),
+    radial-gradient(circle at 80% 20%, #f0c27b, transparent 50%),
+    radial-gradient(circle at 50% 80%, #ff9a9e, transparent 50%);
+  animation: blobAnimation 20s infinite linear;
+  filter: blur(70px);
+  opacity: 0.7;
+}
+
+/* 🌀 Animation keyframes */
+@keyframes blobAnimation {
+  0% {
+    background-position: 20% 30%, 80% 20%, 50% 80%;
+  }
+  50% {
+    background-position: 25% 35%, 75% 25%, 55% 85%;
+  }
+  100% {
+    background-position: 20% 30%, 80% 20%, 50% 80%;
+  }
+}
+
+/* ✨ Make section content stay above the blobs */
+.men-categories-section {
+  position: relative;
+  z-index: 1;
+  background: transparent;
+  padding: 100px 40px;
+}

@@ -1,0 +1,150 @@
+/* General Navbar Styling */
+* {
+  font-family: monospace;
+}
+.navbar-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 0.75rem 2rem;
+  border-bottom: 1px solid #e0e0e0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+/* Logo Styling */
+.Logo img {
+  max-height: 140px;
+  max-width: 140px;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  scale: 1.2;
+}
+
+.Logo img:hover {
+  transform: scale(1.05);
+}
+
+/* SearchBar */
+.search-bar {
+  flex: 1;
+  max-width: 400px;
+  margin: 0 2rem;
+}
+
+/* Nav Links (desktop) */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333333;
+  font-size: 1.5rem;
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 4px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:active {
+  color: #00b5b7;
+}
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background-color: #333;
+  border-radius: 2px;
+}
+
+@media screen and (max-width: "900px") {
+  .search-bar {
+    display: none;
+  }
+}
+/* Responsive */
+@media (max-width: 1200px) {
+  .nav-links {
+    display: none;
+  }
+  .icon {
+    display: flex;
+    align-items: center;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .search-bar {
+    display: none;
+  }
+
+  /* Sidebar styles (mobile) */
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 70%;
+    max-width: 280px;
+    background-color: white;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    z-index: 1500;
+  }
+
+  .nav-links.open {
+    right: 0;
+  }
+
+  .nav-links a {
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: #0097a7;
+    padding: 0.5rem 0;
+    border: #333 1px solid;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+  }
+  .links-a:hover {
+    background-color: #0097a7;
+    border: none;
+    color: white;
+  }
+  .links-a:active {
+    background-color: #025e68;
+  }
+  .nav-links a:active {
+    background-color: #0d464d;
+  }
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}

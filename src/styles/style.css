@@ -1,0 +1,181 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #f0f2f5;
+}
+
+/* Card container with image and form */
+.card-container {
+  display: flex;
+  max-width: 900px;
+  width: 90%;
+  height: 9000px;
+  background: white;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+/* Left side image */
+.card-container::before {
+  content: "";
+  background: url("../assets/images/balancing-1868051_1280.jpg") no-repeat
+    center center;
+  background-size: cover;
+  flex: 1;
+  min-width: 300px;
+}
+
+/* Right side login form */
+.card {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: fit-content;
+  width: fit-content;
+}
+
+.card img {
+  max-width: 150px;
+  max-height: 150px;
+  align-self: center;
+}
+
+/* Heading */
+.card--title {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+}
+.card--form {
+  max-height: 1000px;
+}
+
+/* Input styling */
+.card--input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.card--pass {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+/* Button styling */
+.card--button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4a90e2;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+.card--button:hover {
+  background-color: #357ab8;
+}
+
+/* Text and links */
+.card--text {
+  font-size: 14px;
+  margin-top: 15px;
+  color: #666;
+}
+
+.card--forgot {
+  font-size: 14px;
+  margin-top: 0px;
+  color: #666;
+  display: flex;
+  justify-content: right;
+}
+
+.card--link {
+  color: #4a90e2;
+  text-decoration: none;
+}
+
+.card--link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .card-container::before {
+    display: none;
+  }
+}
+
+.card--main {
+  position: relative;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Blurred background image */
+.card--main::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("https://cdn.pixabay.com/photo/2016/03/26/22/13/man-1281562_1280.jpg")
+    no-repeat center center;
+  background-size: cover;
+  z-index: 0;
+  opacity: 0.6;
+}
+
+/* Ensure card container is above the blur */
+.card-container {
+  position: relative;
+  display: flex;
+  max-width: 900px;
+  width: 90%;
+  height: fit-content;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.card-outer {
+  display: flex;
+  height: 100vh;
+  justify-content: left;
+  align-items: center;
+  background-color: #f8f9fa;
+  padding-left: 30px;
+  padding-top: 0px;
+}
+
+.card-cont {
+  display: flex;
+  max-width: 900px;
+  width: 20rem;
+  height: 25rem;
+  background: white;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+}
