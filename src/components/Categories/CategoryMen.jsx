@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../../styles/menCategoris.css";
+import "../../styles/categoris.css";
 import tshirt from "../../assets/Cat/Men's/tshirt.svg";
 import formal from "../../assets/Cat/Men's/formal.svg";
 import hoodie from "../../assets/Cat/Men's/hoodie.svg";

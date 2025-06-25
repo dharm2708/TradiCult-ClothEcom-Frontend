@@ -46,6 +46,7 @@
   transform-style: preserve-3d;
   text-align: center;
   position: relative;
+  cursor: pointer;
 }
 
 .men-category-card-3d:hover .card-inner {

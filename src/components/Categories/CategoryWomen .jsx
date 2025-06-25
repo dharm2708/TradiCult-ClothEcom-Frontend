@@ -73,39 +73,21 @@ const WomenCategories = [
   },
   {
     id: 10,
-    name: "Sports Bra",
-    icon: sportsBra,
-    description: "Supportive and stylish for active moments.",
-  },
-  {
-    id: 11,
     name: "Saree",
     icon: saree,
     description: "Iconic drapes for timeless tradition.",
   },
   {
-    id: 12,
+    id: 11,
     name: "Jump Suits",
     icon: jumpSuit,
     description: "Effortless one-piece elegance and ease.",
   },
   {
-    id: 13,
-    name: "Innerwear",
-    icon: underwear,
-    description: "Gentle layers designed for daily comfort.",
-  },
-  {
-    id: 14,
+    id: 12,
     name: "Ethnic Sets",
     icon: ethnicSets,
     description: "Complete traditional outfits with flair.",
-  },
-  {
-    id: 15,
-    name: "Bra",
-    icon: bra,
-    description: "Essential support with comfort in style.",
   },
 ];
 

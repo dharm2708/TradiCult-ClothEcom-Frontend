@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 const KidsCloth = ({ categoryId }) => {
   const navigate = useNavigate();
-  const category = categoriesKids.find((cat) => cat.id !== categoryId);
+  const category = categoriesKids.find((cat) => cat.id === categoryId);
   if (!category) return <h2>No Product Found</h2>;
   const handleClick = (category, name) => {
     navigate(`/category/kids/${category}/${name}`);

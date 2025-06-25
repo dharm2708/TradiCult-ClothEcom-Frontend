@@ -6,11 +6,7 @@ const App = () => {
   useEffect(() => {
     smooth();
   }, []);
-  return (
-    <>
-      <div>{appRoutes()}</div>
-    </>
-  );
+  return <>{appRoutes()}</>;
 };
 
 export default App;
