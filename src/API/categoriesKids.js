@@ -72,7 +72,8 @@ const categoriesKids = [
       },
       {
         name: "Polka Dot Party Dress",
-        image: "https://i.ebayimg.com/images/g/PjsAAOSw9Etj13Ju/s-l400.jpg",
+        image:
+          "https://www.glassslipperformals.com/cdn/shop/files/K38147-2-640x960.jpg?v=1692737514",
         description: "Chic polka dot dress for special days.",
         price: 999,
         sale: true,
