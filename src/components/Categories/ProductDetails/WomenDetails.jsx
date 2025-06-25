@@ -31,10 +31,10 @@ const WomenDetails = () => {
 
           {/* Product Info Section */}
           <div className="product-info">
-            <h1>Denim Jacket</h1>
+            <h1>{product.name}</h1>
 
             <div className="product-price-rating">
-              <p className="price">$20.00</p>
+              <p className="price">{product.price}</p>
               <div className="rating">
                 {[...Array(5)].map((_, index) => (
                   <FaStar key={index} className="star" />
