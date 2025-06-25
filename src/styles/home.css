@@ -74,7 +74,6 @@
   color: #f0f0f0;
 }
 
-/* Layout for right stacked cards */
 .stacked-cards {
   display: flex;
   flex-direction: column;
@@ -89,47 +88,6 @@
   height: 310px;
 }
 
-/* Responsive */
-@media screen and (max-width: 992px) {
-  .elevated-layout {
-    grid-template-columns: 1fr;
-  }
-
-  .stacked-cards {
-    flex-direction: row;
-    gap: 1.5rem;
-  }
-
-  .feature-card.small {
-    flex: 1;
-    height: 5%;
-  }
-
-  .feature-card.large {
-    height: 500px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .elevated-title {
-    font-size: 2.4rem;
-  }
-
-  .card-content {
-    bottom: 1rem;
-    left: 1rem;
-    padding: 1rem 1.4rem;
-  }
-
-  .card-content h3 {
-    font-size: 1.4rem;
-  }
-
-  .card-content p {
-    font-size: 0.9rem;
-  }
-}
-
 .background-container {
   background: linear-gradient(-45deg, #e0f7fa, #fce4ec, #e8f5e9, #fff3e0);
   background-size: 400% 400%;
@@ -138,15 +96,13 @@
   margin: 0;
 }
 
-/* Apply it to the whole section */
 .men-categories-section {
-  padding: 100px 40px;
-  background: transparent;
   position: relative;
   z-index: 1;
+  background: transparent;
+  padding: 100px 40px;
 }
 
-/* Animation Keyframes */
 @keyframes gradientFlow {
   0% {
     background-position: 0% 50%;
@@ -159,13 +115,11 @@
   }
 }
 
-/* 🔮 Wrapper for background blob animation */
 .background-blob-wrapper {
   position: relative;
   overflow: hidden;
 }
 
-/* 🔵 Animated Blobs Container */
 .animated-blobs {
   position: absolute;
   top: 0;
@@ -182,7 +136,6 @@
   opacity: 0.7;
 }
 
-/* 🌀 Animation keyframes */
 @keyframes blobAnimation {
   0% {
     background-position: 20% 30%, 80% 20%, 50% 80%;
@@ -195,10 +148,107 @@
   }
 }
 
-/* ✨ Make section content stay above the blobs */
-.men-categories-section {
-  position: relative;
-  z-index: 1;
-  background: transparent;
-  padding: 100px 40px;
+@media (max-width: 1024px) {
+  .elevated-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-card.large,
+  .feature-card.small {
+    height: 400px;
+  }
+
+  .stacked-cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  .stacked-cards .feature-card {
+    flex: 1 1 48%;
+    height: 250px;
+  }
+
+  .elevated-title {
+    font-size: 3rem;
+  }
+  .elevated-layout {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .stacked-cards .feature-card {
+    flex: 1 1 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .elevated-title {
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+  }
+
+  .feature-card.large,
+  .feature-card.small {
+    height: 300px;
+  }
+
+  .stacked-cards {
+    flex-direction: column;
+  }
+
+  .card-content {
+    bottom: 1rem;
+    left: 1rem;
+    padding: 0.8rem 1.2rem;
+    border-radius: 0.8rem;
+  }
+
+  .card-content h3 {
+    font-size: 1.4rem;
+  }
+
+  .card-content p {
+    font-size: 0.9rem;
+  }
+
+  .men-categories-section {
+    padding: 60px 20px;
+  }
+  .stacked-cards .feature-card {
+    height: auto;
+  }
+
+  @media (max-width: 480px) {
+    .elevated-title {
+      font-size: 2rem;
+    }
+
+    .feature-card.large,
+    .feature-card.small {
+      height: 240px;
+    }
+
+    .card-content h3 {
+      font-size: 1.2rem;
+    }
+
+    .card-content p {
+      font-size: 0.8rem;
+    }
+
+    .elevated-categories {
+      padding: 3rem 1rem;
+    }
+
+    .stacked-cards .feature-card {
+      flex: 1 1 100%;
+    }
+  }
+  .elevated-layout,
+  .stacked-cards {
+    min-height: 0;
+    height: auto;
+  }
 }

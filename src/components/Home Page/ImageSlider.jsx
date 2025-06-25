@@ -1,15 +1,15 @@
 import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import Banner1 from "../assets/images/banner4.jpg";
-import Banner2 from "../assets/images/banner3.png";
-import Banner3 from "../assets/images/banner2.jpg";
-import Banner4 from "../assets/images/banner1.png";
+import Banner1 from "../../assets/images/banner4.jpg";
+import Banner2 from "../../assets/images/banner3.png";
+import Banner3 from "../../assets/images/banner2.jpg";
+import Banner4 from "../../assets/images/banner1.png";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import "../styles/imageslider.css";
+import "../../styles/imageslider.css";
 
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 

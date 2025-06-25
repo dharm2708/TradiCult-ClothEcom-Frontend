@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import "../styles/navbar.css";
-import logo from "../assets/images/Logo-main.png"; // Adjust the path as necessary
-import CONSTANTS from "../Constants/RouteConstants";
-import SearchBar from "./SearchBar"; // Assuming you have a SearchBar component
+import "../../styles/navbar.css";
+import logo from "../../assets/images/Logo-main.png"; // Adjust the path as necessary
+import CONSTANTS from "../../Constants/RouteConstants";
+import SearchBar from "../Home Page/SearchBar"; // Assuming you have a SearchBar component
 
 const Navbar = () => {
   const navigate = useNavigate();

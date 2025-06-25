@@ -138,7 +138,8 @@ const categoriesMan = [
     products: [
       {
         name: "Sporty Performance Joggers",
-        image: "https://cdn.shopify.com/s/files/example11.jpg",
+        image:
+          "https://img.freepik.com/free-photo/male-athlete-doing-fitness-training-workout-outside-gym_1328-4746.jpg?uid=R154341588&ga=GA1.1.1986206314.1749443184&semt=ais_hybrid&w=740",
         description: "Performance joggers perfect for workouts.",
         price: 2499,
         sale: true,
@@ -146,7 +147,8 @@ const categoriesMan = [
       },
       {
         name: "Basic Black Joggers",
-        image: "https://some-retailer.com/images/joggers-basic.jpg",
+        image:
+          "http://img.freepik.com/premium-photo/blank-black-mens-sport-sweatpants-mockup-gray-background_981499-2937.jpg?uid=R154341588&ga=GA1.1.1986206314.1749443184&semt=ais_hybrid&w=740",
         description: "Everyday soft-cotton black joggers.",
         price: 2199,
         sale: false,
@@ -154,7 +156,8 @@ const categoriesMan = [
       },
       {
         name: "Cuffed Fit Joggers",
-        image: "https://images.evereve.com/example-short.jpg",
+        image:
+          "https://img.freepik.com/premium-photo/young-fashion-mans-legs-with-white-sneakers-white-shoes_281858-2178.jpg?uid=R154341588&ga=GA1.1.1986206314.1749443184&semt=ais_hybrid&w=740",
         description: "Cuffed ankles with urban style.",
         price: 2699,
         sale: false,
@@ -168,7 +171,8 @@ const categoriesMan = [
     products: [
       {
         name: "Denim Shorts",
-        image: "https://vervetdenim.com/cdn/example-denim.jpg",
+        image:
+          "https://img.freepik.com/premium-photo/young-latin-man-nature_313999-748.jpg?uid=R154341588&ga=GA1.1.1986206314.1749443184&semt=ais_hybrid&w=740",
         description: "Rugged style high-rise denim shorts.",
         price: 1799,
         sale: true,
@@ -176,7 +180,8 @@ const categoriesMan = [
       },
       {
         name: "Cotton Lounge Shorts",
-        image: "https://gapfactory.com/cdn/example-cotton-short.jpg",
+        image:
+          "https://img.freepik.com/free-photo/young-stylish-man-looking-window_23-2147862575.jpg?uid=R154341588&ga=GA1.1.1986206314.1749443184&semt=ais_hybrid&w=740",
         description: "Soft cotton shorts for lounging.",
         price: 1599,
         sale: false,
@@ -184,7 +189,8 @@ const categoriesMan = [
       },
       {
         name: "Cargo Utility Shorts",
-        image: "https://roxy.com/cdn/example-short2.jpg",
+        image:
+          "https://img.freepik.com/premium-photo/portrait-man-with-sunglasses-nature_38810-8907.jpg?uid=R154341588&ga=GA1.1.1986206314.1749443184&semt=ais_hybrid&w=740",
         description: "Outdoor-ready shorts with cargo pockets.",
         price: 1999,
         sale: true,
@@ -198,7 +204,8 @@ const categoriesMan = [
     products: [
       {
         name: "Navy Blue Meeting Blazer",
-        image: "https://example.com/images/blazers/navy.jpg",
+        image:
+          "https://img.freepik.com/premium-photo/young-handsome-businessman-wearing-suit_220507-604.jpg?uid=R154341588&ga=GA1.1.1986206314.1749443184&semt=ais_hybrid&w=740",
         description: "Polished look for formal settings.",
         price: 6999,
         sale: true,
@@ -206,7 +213,8 @@ const categoriesMan = [
       },
       {
         name: "Grey Checked Blazer",
-        image: "https://example.com/images/blazers/grey-check.jpg",
+        image:
+          "https://img.freepik.com/free-photo/stylish-young-man-arranging-jacket_23-2148316607.jpg?uid=R154341588&ga=GA1.1.1986206314.1749443184&semt=ais_hybrid&w=740",
         description: "Stylish pattern for sleek outfits.",
         price: 7299,
         sale: false,
@@ -214,7 +222,8 @@ const categoriesMan = [
       },
       {
         name: "Black Slim Fit Blazer",
-        image: "https://example.com/images/blazers/black-slim.jpg",
+        image:
+          "https://img.freepik.com/free-photo/confident-young-man-walking-european-city-street_158595-4725.jpg?uid=R154341588&ga=GA1.1.1986206314.1749443184&semt=ais_hybrid&w=740",
         description: "Evening-ready slim silhouette.",
         price: 7499,
         sale: true,
@@ -228,7 +237,8 @@ const categoriesMan = [
     products: [
       {
         name: "Urban Bomber Jacket",
-        image: "https://example.com/images/jackets/bomber.jpg",
+        image:
+          "https://img.freepik.com/free-photo/portrait-young-peson-with-their-frinds_23-2149290136.jpg?uid=R154341588&ga=GA1.1.1986206314.1749443184&semt=ais_hybrid&w=740",
         description: "Zip-up jacket with modern edge.",
         price: 5499,
         sale: true,
@@ -236,7 +246,8 @@ const categoriesMan = [
       },
       {
         name: "Denim Jacket",
-        image: "https://example.com/images/jackets/denim.jpg",
+        image:
+          "https://img.freepik.com/free-photo/man-portrait_1296-629.jpg?uid=R154341588&ga=GA1.1.1986206314.1749443184&semt=ais_hybrid&w=740",
         description: "Timeless rugged denim outerwear.",
         price: 5299,
         sale: false,
@@ -244,7 +255,8 @@ const categoriesMan = [
       },
       {
         name: "Puffer Winter Jacket",
-        image: "https://example.com/images/jackets/puffer.jpg",
+        image:
+          "https://img.freepik.com/free-photo/young-attractive-male-posing-nature_181624-46384.jpg?uid=R154341588&ga=GA1.1.1986206314.1749443184&semt=ais_hybrid&w=740",
         description: "Warm down-filled winter coat.",
         price: 6499,
         sale: true,
@@ -258,7 +270,8 @@ const categoriesMan = [
     products: [
       {
         name: "Classic Pullover Hoodie",
-        image: "https://example.com/images/hoodies/classic.jpg",
+        image:
+          "https://img.freepik.com/premium-photo/vertical-shot-model-portrait-walking_755989-141.jpg?uid=R154341588&ga=GA1.1.1986206314.1749443184&semt=ais_hybrid&w=740",
         description: "Soft fleece hoodie with kangaroo pocket.",
         price: 2999,
         sale: false,
@@ -266,7 +279,8 @@ const categoriesMan = [
       },
       {
         name: "Zip-Up Lightweight Hoodie",
-        image: "https://example.com/images/hoodies/zip.jpg",
+        image:
+          "https://img.freepik.com/free-photo/medium-shot-contemplative-man-seaside_23-2150531603.jpg?uid=R154341588&ga=GA1.1.1986206314.1749443184&semt=ais_hybrid&w=740",
         description: "Perfect layering for mild days.",
         price: 2799,
         sale: true,
@@ -274,7 +288,8 @@ const categoriesMan = [
       },
       {
         name: "Graphic Streetwear Hoodie",
-        image: "https://example.com/images/hoodies/graphic.jpg",
+        image:
+          "https://img.freepik.com/premium-photo/man-with-hood-obscuring-his-face-touching-white-wall-stock-photo_195114-63322.jpg?uid=R154341588&ga=GA1.1.1986206314.1749443184&semt=ais_hybrid&w=740",
         description: "Bold print for urban style.",
         price: 3199,
         sale: false,
@@ -288,7 +303,8 @@ const categoriesMan = [
     products: [
       {
         name: "Cable-Knit Crew Sweater",
-        image: "https://example.com/images/sweaters/cable.jpg",
+        image:
+          "https://img.freepik.com/free-photo/medium-shot-smiley-man-wearing-warm-clothes_23-2149248883.jpg?uid=R154341588&ga=GA1.1.1986206314.1749443184&semt=ais_hybrid&w=740",
         description: "Cozy cable knit in soft wool blend.",
         price: 3999,
         sale: false,
@@ -296,7 +312,8 @@ const categoriesMan = [
       },
       {
         name: "V-Neck Merino Sweater",
-        image: "https://example.com/images/sweaters/merino.jpg",
+        image:
+          "https://img.freepik.com/free-photo/fashionable-man-winter-knitted-clothes_158595-4105.jpg?uid=R154341588&ga=GA1.1.1986206314.1749443184&semt=ais_hybrid&w=740",
         description: "Smart lightweight layering piece.",
         price: 3699,
         sale: true,
@@ -304,7 +321,8 @@ const categoriesMan = [
       },
       {
         name: "Quarter-Zip Pullover",
-        image: "https://example.com/images/sweaters/zip.jpg",
+        image:
+          "https://img.freepik.com/free-photo/young-man-enjoying-his-life-offline_23-2149295256.jpg?uid=R154341588&ga=GA1.1.1986206314.1749443184&semt=ais_hybrid&w=740",
         description: "Casual zip neck for comfort days.",
         price: 3899,
         sale: false,
@@ -318,7 +336,8 @@ const categoriesMan = [
     products: [
       {
         name: "Embroidered Kurta Set",
-        image: "https://example.com/images/ethnic/kurta1.jpg",
+        image:
+          "https://img.freepik.com/premium-photo/man-red-dress-stands-front-green-background_278224-229.jpg?uid=R154341588&ga=GA1.1.1986206314.1749443184&semt=ais_hybrid&w=740",
         description: "Festive kurta with intricate embroidery.",
         price: 4599,
         sale: false,
@@ -326,7 +345,8 @@ const categoriesMan = [
       },
       {
         name: "Silk Printed Kurta",
-        image: "https://example.com/images/ethnic/kurta2.jpg",
+        image:
+          "https://img.freepik.com/premium-photo/mens-designer-kurta-pajama_764575-3010.jpg?uid=R154341588&ga=GA1.1.1986206314.1749443184&semt=ais_hybrid&w=740",
         description: "Elegant silk print for celebrations.",
         price: 5299,
         sale: false,
@@ -334,7 +354,8 @@ const categoriesMan = [
       },
       {
         name: "Cotton Pathani Kurta",
-        image: "https://example.com/images/ethnic/kurta3.jpg",
+        image:
+          "https://img.freepik.com/premium-photo/man-black-dress-stands-front-green-background_278224-240.jpg?uid=R154341588&ga=GA1.1.1986206314.1749443184&semt=ais_hybrid&w=740",
         description: "Breathable cotton kurta for comfort.",
         price: 3999,
         sale: true,
@@ -348,7 +369,8 @@ const categoriesMan = [
     products: [
       {
         name: "Silk Nehru Jacket",
-        image: "https://example.com/images/nehru/silk.jpg",
+        image:
+          "https://img.freepik.com/free-photo/indian-man-traditional-attire-temple_23-2151996324.jpg?uid=R154341588&ga=GA1.1.1986206314.1749443184&semt=ais_hybrid&w=740",
         description: "Formal silk jacket in classic cut.",
         price: 6199,
         sale: false,
@@ -356,7 +378,8 @@ const categoriesMan = [
       },
       {
         name: "Cotton Nehru Waistcoat",
-        image: "https://example.com/images/nehru/cotton.jpg",
+        image:
+          "https://img.freepik.com/free-photo/indian-man-mountains-male-traditional-turban-hinduist_1157-41078.jpg?uid=R154341588&ga=GA1.1.1986206314.1749443184&semt=ais_hybrid&w=740",
         description: "Lightweight and versatile waistcoat.",
         price: 4899,
         sale: true,
@@ -364,7 +387,8 @@ const categoriesMan = [
       },
       {
         name: "Velvet Nehru Jacket",
-        image: "https://example.com/images/nehru/velvet.jpg",
+        image:
+          "https://img.freepik.com/premium-photo/young-indian-man-traditional-wear_621325-1729.jpg?uid=R154341588&ga=GA1.1.1986206314.1749443184&semt=ais_hybrid&w=740",
         description: "Premium velvet ideal for weddings.",
         price: 6999,
         sale: false,
@@ -378,7 +402,8 @@ const categoriesMan = [
     products: [
       {
         name: "Cotton Boxers Pack",
-        image: "https://example.com/images/innerwear/boxers.jpg",
+        image:
+          "https://img.freepik.com/premium-photo/medical-concept-man-looking-something-boxers-closeup_392895-372532.jpg?uid=R154341588&ga=GA1.1.1986206314.1749443184&semt=ais_hybrid&w=740",
         description: "Pack of 3 breathable cotton boxers.",
         price: 1199,
         sale: true,
@@ -386,7 +411,8 @@ const categoriesMan = [
       },
       {
         name: "Seamless Vests",
-        image: "https://example.com/images/innerwear/vests.jpg",
+        image:
+          "https://img.freepik.com/free-photo/portrait-fitness-young-man-standing-track-field_23-2148162072.jpg?uid=R154341588&ga=GA1.1.1986206314.1749443184&semt=ais_hybrid&w=740",
         description: "Soft seamless vests for daily wear.",
         price: 899,
         sale: false,
@@ -394,7 +420,8 @@ const categoriesMan = [
       },
       {
         name: "Thermal Shorts",
-        image: "https://example.com/images/innerwear/thermal.jpg",
+        image:
+          "https://img.freepik.com/free-photo/full-shot-man-experiencing-cold-exposure-wellness_23-2151138495.jpg?uid=R154341588&ga=GA1.1.1986206314.1749443184&semt=ais_hybrid&w=740",
         description: "Warm lightweight thermals.",
         price: 1499,
         sale: false,
@@ -408,7 +435,8 @@ const categoriesMan = [
     products: [
       {
         name: "Cotton Pajama Set",
-        image: "https://example.com/images/sleepwear/pajama.jpg",
+        image:
+          "https://img.freepik.com/free-photo/man-gray-pajamas-comfy-sleepwear-apparel-full-body_53876-126947.jpg?uid=R154341588&ga=GA1.1.1986206314.1749443184&semt=ais_hybrid&w=740",
         description: "Soft pajamas with relaxed fit.",
         price: 1799,
         sale: true,
@@ -416,7 +444,8 @@ const categoriesMan = [
       },
       {
         name: "Silk Nightshirt",
-        image: "https://example.com/images/sleepwear/nightshirt.jpg",
+        image:
+          "https://img.freepik.com/free-photo/portrait-man-eating-food-morning-breakfast-sitting-kitchen-counter_23-2148195294.jpg?uid=R154341588&ga=GA1.1.1986206314.1749443184&semt=ais_hybrid&w=740",
         description: "Luxurious silk nightshirt.",
         price: 2499,
         sale: false,
@@ -424,7 +453,8 @@ const categoriesMan = [
       },
       {
         name: "Thermal Pyjama Set",
-        image: "https://example.com/images/sleepwear/thermal.jpg",
+        image:
+          "https://img.freepik.com/premium-photo/morning-zen-pajamaclad-man-meditates-bed_1074916-21487.jpg?uid=R154341588&ga=GA1.1.1986206314.1749443184&semt=ais_hybrid&w=740",
         description: "Warm thermals for chilly nights.",
         price: 1999,
         sale: false,
@@ -438,7 +468,8 @@ const categoriesMan = [
     products: [
       {
         name: "Casual Sneakers",
-        image: "https://example.com/images/footwear/sneakers.jpg",
+        image:
+          "https://img.freepik.com/premium-photo/men-s-comfortable-shoes-with-natural-material-men-s-sneakers-style-kezhual-every-day-made-with-natural-leather-high-quality-photo_173815-17038.jpg?uid=R154341588&ga=GA1.1.1986206314.1749443184&semt=ais_hybrid&w=740",
         description: "Everyday canvas sneakers.",
         price: 2499,
         sale: true,
@@ -446,7 +477,8 @@ const categoriesMan = [
       },
       {
         name: "Leather Loafers",
-        image: "https://example.com/images/footwear/loafers.jpg",
+        image:
+          "https://img.freepik.com/free-photo/crop-legs-businessman-near-road_23-2147932400.jpg?uid=R154341588&ga=GA1.1.1986206314.1749443184&semt=ais_hybrid&w=740",
         description: "Smart formal loafers in leather.",
         price: 3999,
         sale: false,
@@ -454,7 +486,8 @@ const categoriesMan = [
       },
       {
         name: "Sport Sandals",
-        image: "https://example.com/images/footwear/sandals.jpg",
+        image:
+          "https://img.freepik.com/premium-photo/footwear-fashion-photoshoot_905179-175.jpg?uid=R154341588&ga=GA1.1.1986206314.1749443184&semt=ais_hybrid&w=740",
         description: "Comfortable sandals for outings.",
         price: 1999,
         sale: false,
@@ -468,7 +501,8 @@ const categoriesMan = [
     products: [
       {
         name: "Three-Piece Suit",
-        image: "https://example.com/images/formal/suit.jpg",
+        image:
+          "https://img.freepik.com/free-photo/portrait-happy-smiling-young-businessman-blue-suit-isolated-white-wall_231208-9205.jpg?uid=R154341588&ga=GA1.1.1986206314.1749443184&semt=ais_hybrid&w=740",
         description: "Complete three-piece suit set.",
         price: 14999,
         sale: true,
@@ -476,7 +510,8 @@ const categoriesMan = [
       },
       {
         name: "Tailored Tuxedo",
-        image: "https://example.com/images/formal/tuxedo.jpg",
+        image:
+          "https://img.freepik.com/free-photo/man-suit-studio_1303-5857.jpg?uid=R154341588&ga=GA1.1.1986206314.1749443184&semt=ais_hybrid&w=740",
         description: "Elegant tuxedo for black-tie events.",
         price: 17999,
         sale: false,
@@ -484,7 +519,8 @@ const categoriesMan = [
       },
       {
         name: "Formal Waistcoat",
-        image: "https://example.com/images/formal/waistcoat.jpg",
+        image:
+          "https://img.freepik.com/premium-photo/elegant-man-bowtie-grizzled-man-formalwear-tux-man-bridegroom_474717-74544.jpg?uid=R154341588&ga=GA1.1.1986206314.1749443184&semt=ais_hybrid&w=740",
         description: "Classic waistcoat to complement suits.",
         price: 4999,
         sale: false,

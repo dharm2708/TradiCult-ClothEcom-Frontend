@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/TextScroll.css";
+import "../../styles/TextScroll.css";
 
 const TextScroll = () => {
   return (

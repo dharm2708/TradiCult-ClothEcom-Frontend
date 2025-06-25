@@ -1,5 +1,5 @@
 import React from "react";
-import WelcomeAbout from "../components/WelcomeAbout";
+import WelcomeAbout from "../components/About/WelcomeAbout";
 import { AboutData } from "../API/aboutData";
 import { useState } from "react";
 import { AboutVision } from "../API/aboutVision";

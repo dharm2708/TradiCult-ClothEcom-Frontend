@@ -1,8 +1,8 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import MenCloth from "../components/MenCloth";
-import WomenCloth from "../components/WomenCloth";
-import KidsCloth from "../components/KidsCloth";
+import MenCloth from "../components/Categories/Products/MenCloth";
+import WomenCloth from "../components/Categories/Products/WomenCloth";
+import KidsCloth from "../components/Categories/Products/KidsCloth";
 
 const ProductPage = () => {
   const location = useLocation();

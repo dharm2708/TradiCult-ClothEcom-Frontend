@@ -1,24 +1,23 @@
 import React, { useState } from "react";
-import "../styles/menCategoris.css";
-import tshirt from "../assets/Cat/Men's/tshirt.svg";
-import formal from "../assets/Cat/Men's/formal.svg";
-import hoodie from "../assets/Cat/Men's/hoodie.svg";
-import jacket from "../assets/Cat/Men's/jacket.svg";
-import jeans from "../assets/Cat/Men's/jeans.svg";
-import jogger from "../assets/Cat/Men's/jogger.svg";
-import kurta from "../assets/Cat/Men's/kurta.svg";
-import nehru from "../assets/Cat/Men's/nehru jacket.svg";
-import shirt from "../assets/Cat/Men's/shirt.svg";
-import shoes from "../assets/Cat/Men's/shoes.svg";
-import Shorts from "../assets/Cat/Men's/Shorts.svg";
-import sleepwear from "../assets/Cat/Men's/sleepwear.svg";
-import suits from "../assets/Cat/Men's/suits.svg";
-import sweater from "../assets/Cat/Men's/sweater.svg";
-import trousers from "../assets/Cat/Men's/trousers.svg";
-import underwear from "../assets/Cat/Men's/underwear.svg";
+import "../../styles/menCategoris.css";
+import tshirt from "../../assets/Cat/Men's/tshirt.svg";
+import formal from "../../assets/Cat/Men's/formal.svg";
+import hoodie from "../../assets/Cat/Men's/hoodie.svg";
+import jacket from "../../assets/Cat/Men's/jacket.svg";
+import jeans from "../../assets/Cat/Men's/jeans.svg";
+import jogger from "../../assets/Cat/Men's/jogger.svg";
+import kurta from "../../assets/Cat/Men's/kurta.svg";
+import nehru from "../../assets/Cat/Men's/nehru jacket.svg";
+import shirt from "../../assets/Cat/Men's/shirt.svg";
+import shoes from "../../assets/Cat/Men's/shoes.svg";
+import Shorts from "../../assets/Cat/Men's/Shorts.svg";
+import sleepwear from "../../assets/Cat/Men's/sleepwear.svg";
+import suits from "../../assets/Cat/Men's/suits.svg";
+import sweater from "../../assets/Cat/Men's/sweater.svg";
+import trousers from "../../assets/Cat/Men's/trousers.svg";
+import underwear from "../../assets/Cat/Men's/underwear.svg";
 import { IoChevronBack } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
-import CONSTANTS from "../Constants/RouteConstants";
 
 const menCategories = [
   {

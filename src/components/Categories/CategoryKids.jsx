@@ -1,21 +1,19 @@
-import React, { useState } from "react";
-import tshirts from "../assets/Cat/Kid's/tshirts.svg";
-import dress from "../assets/Cat/Kid's/dress.svg";
-import frok from "../assets/Cat/Kid's/frok.svg";
-import jacket from "../assets/Cat/Kid's/jacket.svg";
-import jumpsuits from "../assets/Cat/Kid's/jumpsuits.svg";
-import kidsCoat from "../assets/Cat/Kid's/kids-coat.svg";
-import partyDress from "../assets/Cat/Kid's/party-dress.svg";
-import shorts from "../assets/Cat/Kid's/shorts.svg";
-import sleepwear from "../assets/Cat/Kid's/sleepwear.svg";
+import tshirts from "../../assets/Cat/Kid's/tshirts.svg";
+import dress from "../../assets/Cat/Kid's/dress.svg";
+import frok from "../../assets/Cat/Kid's/frok.svg";
+import jacket from "../../assets/Cat/Kid's/jacket.svg";
+import jumpsuits from "../../assets/Cat/Kid's/jumpsuits.svg";
+import kidsCoat from "../../assets/Cat/Kid's/kids-coat.svg";
+import partyDress from "../../assets/Cat/Kid's/party-dress.svg";
+import shorts from "../../assets/Cat/Kid's/shorts.svg";
+import sleepwear from "../../assets/Cat/Kid's/sleepwear.svg";
 import { useNavigate } from "react-router-dom";
-import CONSTANTS from "../Constants/RouteConstants";
 import { IoChevronBack } from "react-icons/io5";
 
 const KidsCategories = [
   {
     id: 1,
-    name: "T-Shirts Kids",
+    name: "T-Shirts ",
     icon: tshirts,
     description: "Versatile tees for relaxed, stylish looks.",
   },
@@ -63,13 +61,12 @@ const KidsCategories = [
   },
   {
     id: 9,
-    name: "Shhorts",
+    name: "Shorts",
     icon: shorts,
     description: "Breezy bottoms perfect for warm days.",
   },
 ];
 const CategoryKids = () => {
-  const [id, setId] = useState("");
   const navigate = useNavigate();
   const handleClick = () => {
     return navigate(-1);
@@ -85,7 +82,7 @@ const CategoryKids = () => {
           style={{ fontSize: "2rem", cursor: "pointer" }}
           onClick={handleClick}
         />
-        <h1 className="men-categories-heading">Women's Categories</h1>
+        <h1 className="men-categories-heading">Kid's Categories</h1>
         <div className="men-categories-grid">
           {KidsCategories.map((cat, index) => (
             <div

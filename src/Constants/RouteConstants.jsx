@@ -10,6 +10,7 @@ const CONSTANTS = {
   POLICY: `/privacy-policy`,
   CATEGORY: `/category/:id`,
   PRODUCTS: `/category/:category/:cat-style`,
+  PRODUCT_DETAILS: `/category/:category/:cloth-style/:cloth-name`,
   NOPAGEFOUND: "*",
 };
 export default CONSTANTS;

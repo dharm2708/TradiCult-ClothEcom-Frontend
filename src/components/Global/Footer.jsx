@@ -1,8 +1,8 @@
 import React from "react";
-import CONSTANTS from "../Constants/RouteConstants";
-import "../styles/footer.css";
+import CONSTANTS from "../../Constants/RouteConstants";
+import "../../styles/footer.css";
 import { Link } from "react-router-dom";
-import Logo from "../assets/images/Logo-main.png";
+import Logo from "../../assets/images/Logo-main.png";
 import { useNavigate } from "react-router-dom";
 const Footer = () => {
   const navigate = useNavigate();

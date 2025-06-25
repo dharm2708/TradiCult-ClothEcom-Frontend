@@ -4,8 +4,9 @@ import Login from "../Pages/Login";
 import { BrowserRouter } from "react-router-dom";
 import { Route, Routes } from "react-router-dom";
 import CONSTANTS from "../Constants/RouteConstants";
-import Loader from "../components/Loader";
-const ScrollToTop = lazy(() => import("../components/scrollToTop"));
+import Loader from "../components/Global/Loader";
+import Product from "../Pages/Products";
+const ScrollToTop = lazy(() => import("../components/Home Page/scrollToTop"));
 const ProductPage = lazy(() => import("../Pages/ProductPage"));
 const NOPAGEFOUND = lazy(() => import("../Pages/NoPageFound"));
 const Category = lazy(() => import("../Pages/Category"));
@@ -15,8 +16,12 @@ const About = lazy(() => import("../Pages/About"));
 const ContactUs = lazy(() => import("../Pages/ContactUs"));
 const MainLayout = lazy(() => import("../Layout/MainLayout"));
 const VerifyOtp = lazy(() => import("../Pages/VerifyOtp"));
-const TermsConditions = lazy(() => import("../components/TermsConditions"));
-const PrivacyPolicy = lazy(() => import("../components/PrivacyPolicy"));
+const TermsConditions = lazy(() =>
+  import("../components/Home Page/TermsConditions")
+);
+const PrivacyPolicy = lazy(() =>
+  import("../components/Home Page/PrivacyPolicy")
+);
 const Home = lazy(() => import("../Pages/Home"));
 
 const appRoutes = () => {
@@ -31,9 +36,10 @@ const appRoutes = () => {
               <Route path={CONSTANTS.ABOUT} element={<About />} />
               <Route path={CONSTANTS.CONTACT} element={<ContactUs />} />
               <Route path={CONSTANTS.TERMS} element={<TermsConditions />} />
-              <Route path={CONSTANTS.POLICY} element={<PrivacyPolicy />} />
+              <Route path={CONSTANTS.POLICY} element={<PrivacyPolicy />} />s
               <Route path={CONSTANTS.CATEGORY} element={<Category />} />
               <Route path={CONSTANTS.PRODUCTS} element={<ProductPage />} />
+              <Route path={CONSTANTS.PRODUCT_DETAILS} element={<Product />} />
             </Route>
             <Route path={CONSTANTS.LOGIN} element={<Login />} />
             <Route path={CONSTANTS.REGISTER} element={<Register />} />

@@ -1,7 +1,7 @@
-import { productMenu } from "../API/product";
+
 import "../styles/home.css";
-import TextScroll from "../components/TextScroll";
-import ImageSlider from "../components/ImageSlider";
+import TextScroll from "../components/Home Page/TextScroll";
+import ImageSlider from "../components/Home Page/ImageSlider";
 import CatMen from "../assets/images/Category-mens.png";
 import CatWomen from "../assets/images/Cat-Fe-Woman.png";
 import CatKids from "../assets/images/Cat-Fe-Kids.png";

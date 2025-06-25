@@ -1,9 +1,9 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import CategoryMen from "../components/CategoryMen";
+import CategoryMen from "../components/Categories/CategoryMen";
 import Home from "./Home";
-import CategoryWomen from "../components/CategoryWomen ";
-import CategoryKids from "../components/CategoryKids";
+import CategoryWomen from "../components/Categories/CategoryWomen ";
+import CategoryKids from "../components/Categories/CategoryKids";
 
 const Category = () => {
   const location = useLocation();

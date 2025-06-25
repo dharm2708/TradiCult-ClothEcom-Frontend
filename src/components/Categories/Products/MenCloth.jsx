@@ -1,10 +1,17 @@
 import React from "react";
-import { categoriesMan } from "../API/categoriesMan";
-import "../styles/productCard.css";
-const MenCloth = ({ categoryId }) => {
-  const category = categoriesMan.find((cat) => cat.id === categoryId);
-  if (!category) return <h2>Category not found</h2>;
+import { categoriesMan } from "../../../API/categoriesMan";
+import "../../../styles/productCard.css";
+import { useNavigate } from "react-router-dom";
 
+const MenCloth = ({ categoryId }) => {
+  const navigate = useNavigate();
+  const category = categoriesMan.find((cat) => cat.id === categoryId);
+  console.log(category);
+  if (!category) return <h2>Category not found</h2>;
+  const handleClick = (category, name) => {
+    navigate(`/category/men/${category}/${name}`);
+  };
+  console.log(category);
   return (
     <div className="background-blob-wrapper">
       <div className="animated-blobs"></div>
@@ -13,7 +20,12 @@ const MenCloth = ({ categoryId }) => {
         <div className="product-grid">
           {category.products.map((product, index) => (
             <div key={index} className="product-card-clean">
-              <div className="product-img-wrapper">
+              <div
+                className="product-img-wrapper"
+                onClick={() => {
+                  handleClick(category.category, product.name);
+                }}
+              >
                 <img
                   src={product.image}
                   alt={product.name}
