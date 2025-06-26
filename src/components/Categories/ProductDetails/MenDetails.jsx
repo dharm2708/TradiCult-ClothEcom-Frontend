@@ -154,7 +154,7 @@ const MenDetails = () => {
           </div>
           <div className="extra">
             <div className="offers">
-              <h2>Offers</h2>
+              <h2 className="offer-title">Offers</h2>
               <div className="offer-content">
                 <BiSolidOffer />
                 <p className="offer-info">
