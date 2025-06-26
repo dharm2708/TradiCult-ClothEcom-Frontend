@@ -7,6 +7,10 @@ import { categoriesKids } from "../../../API/categoriesKids";
 import { categoriesMan } from "../../../API/categoriesMan";
 import { BsLightningFill } from "react-icons/bs";
 import SuggestedProduct from "../../Product/suggestedProduct";
+import { TbTruckDelivery } from "react-icons/tb";
+import { LiaShippingFastSolid } from "react-icons/lia";
+import { RiTimerFlashLine } from "react-icons/ri";
+import { BiSolidOffer } from "react-icons/bi";
 const WomenDetails = () => {
   const location = useLocation();
   const navigate = useNavigate();
@@ -143,8 +147,51 @@ const WomenDetails = () => {
               </div>
             </div>
           </div>
+          <div className="extra">
+            <div className="offers">
+              <h2 className="offer-title">Offers</h2>
+              <div className="offer-content">
+                <BiSolidOffer />
+                <p className="offer-info">
+                  SOS1200 - Extra Rs.1200 Off On Min. Purchase of Rs. 7999
+                </p>
+                <BiSolidOffer />
+                <p className="offer-info">
+                  SOS1200 - Extra Rs.1200 Off On Min. Purchase of Rs. 7999
+                </p>
+                <BiSolidOffer />
+                <p className="offer-info">
+                  SOS1200 - Extra Rs.1200 Off On Min. Purchase of Rs. 7999
+                </p>
+              </div>
+            </div>
+            <div className="deliver-details">
+              <h2 className="deliver-title">Delivery Details</h2>
+              <div className="check-loc">
+                <input type="text" placeholder="Enter Pin Code" />
+                <button>Check</button>
+              </div>
+              <div className="delivery-time">
+                <div className="info-grp">
+                  <RiTimerFlashLine className="del-icon" />
+                  <h2 className="deliver-time">Express Delivery</h2>
+                </div>
+                <p className="del-info">Get Product By Today</p>
+                <div className="info-grp">
+                  <LiaShippingFastSolid className="del-icon" />
+                  <h2 className="deliver-time">Fast Delivery</h2>
+                </div>
+                <p className="del-info">Get Product By Tommorow</p>
+                <div className="info-grp">
+                  <TbTruckDelivery className="del-icon" />
+                  <h2 className="deliver-time">Standard Delivery</h2>
+                </div>
+                <p className="del-info">Get Product By 2 Days</p>
+              </div>
+            </div>
+          </div>
         </section>
-        <SuggestedProduct/>
+        <SuggestedProduct />
       </div>
     </>
   );
