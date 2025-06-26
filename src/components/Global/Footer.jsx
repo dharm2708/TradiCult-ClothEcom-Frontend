@@ -51,10 +51,8 @@ const Footer = () => {
             </a>
           </div>
           <div className="credit">
-            <div className="credit-text">
-              &copy; copyright @ {new Date().getFullYear()} by{" "}
-              <span>TradiCult.CO</span> | All Rights Reserved!
-            </div>
+            &copy; copyright @ {new Date().getFullYear()} by{" "}
+            <span>TradiCult.CO</span> | All Rights Reserved!
             <div className="box-icon">
               <Link to={CONSTANTS.CONTACT}>
                 <i className="fab fa-facebook-f"></i>

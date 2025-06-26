@@ -8,6 +8,7 @@ import { categoriesWomen } from "../../../API/categoriesWomen";
 import "../../../styles/product-details.css";
 import "../../../styles/productCard.css";
 import "../../../styles/categoris.css";
+import SuggestedProduct from "../../Product/suggestedProduct";
 const MenDetails = () => {
   const location = useLocation();
   const navigate = useNavigate();
@@ -34,6 +35,9 @@ const MenDetails = () => {
   //Click Handler
   const handleClickKids = (category, name) => {
     navigate(`/category/kids/${category}/${name}`);
+  };
+  const handleClickwomen = (category, name) => {
+    navigate(`/category/women/${category}/${name}`);
   };
   if (!product) return <h2>Product Not Found</h2>;
 
@@ -145,67 +149,7 @@ const MenDetails = () => {
           </div>
         </section>
         {/* Suggestion Section */}
-        <section className="suggested-content">
-          <h1 className="suggest-title">Suggested Product</h1>
-          <div className="product-grid">
-            {kidsCat &&
-              kidsCat.products &&
-              kidsCat.products.map((product, index) => (
-                <div key={index} className="product-card-clean">
-                  <div
-                    className="product-img-wrapper"
-                    onClick={() => {
-                      handleClickKids(category.category, product.name);
-                    }}
-                  >
-                    <img
-                      src={product.image}
-                      alt={product.name}
-                      className="product-img"
-                    />
-                    {product.sale && (
-                      <span className="tag-badge sale">Sale</span>
-                    )}
-                    {product.bestSeller && (
-                      <span className="tag-badge best">Best Seller</span>
-                    )}
-                  </div>
-                  <div className="product-details">
-                    <h2 className="product-name">{product.name}</h2>
-                    <p className="product-price">₹{product.price}</p>
-                  </div>
-                </div>
-              ))}
-            {womenCat &&
-              womenCat.products &&
-              womenCat.products.map((product, index) => (
-                <div key={index} className="product-card-clean">
-                  <div
-                    className="product-img-wrapper"
-                    onClick={() => {
-                      handleClickKids(category.category, product.name);
-                    }}
-                  >
-                    <img
-                      src={product.image}
-                      alt={product.name}
-                      className="product-img"
-                    />
-                    {product.sale && (
-                      <span className="tag-badge sale">Sale</span>
-                    )}
-                    {product.bestSeller && (
-                      <span className="tag-badge best">Best Seller</span>
-                    )}
-                  </div>
-                  <div className="product-details">
-                    <h2 className="product-name">{product.name}</h2>
-                    <p className="product-price">₹{product.price}</p>
-                  </div>
-                </div>
-              ))}
-          </div>
-        </section>
+        <SuggestedProduct />
       </div>
     </>
   );

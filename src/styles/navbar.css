@@ -72,6 +72,21 @@
   border-radius: 2px;
 }
 
+.icon-btn {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  .btn-nav {
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+  }
+}
+.btn-nav:hover {
+  color: #0097a7;
+  transition: 0.3s ease-in-out;
+}
+
 @media screen and (max-width: "900px") {
   .search-bar {
     display: none;

@@ -3,6 +3,7 @@
   color: #333;
   padding: 40px 20px;
   font-family: cursive;
+  width: 100%;
 }
 
 /* Logo Section */
@@ -18,7 +19,7 @@
 
 .footer .logo img {
   height: auto;
-  margin-left: 15px;
+  margin-left: auto;
   max-width: 200px;
   max-height: 200px;
 }
@@ -37,7 +38,7 @@
   max-width: 1200px;
   justify-content: space-around;
   margin: auto;
-  gap: 2rem;
+  gap: 5rem;
 }
 
 /* Box Section */
@@ -46,8 +47,7 @@
   flex-direction: column;
   gap: 12px;
   margin-top: 15px;
-  flex: 1 1 250px;
-  min-width: 200px;
+  width: auto;
 }
 
 .footer .box a {
@@ -68,24 +68,22 @@
   font-size: 1.5rem;
 }
 
-/* Credit Section */
 .footer .credit {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-  padding-top: 30px;
   border-top: 1px solid #444;
   font-size: 1.2rem;
+  padding-top: 20px;
   color: #333;
   gap: 1rem;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .footer .credit span {
   color: #333;
 }
 
-/* Social Icons */
 .footer .box-icon {
   display: flex;
   gap: 15px;

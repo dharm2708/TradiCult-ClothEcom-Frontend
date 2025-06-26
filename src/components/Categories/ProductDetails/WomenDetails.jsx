@@ -6,6 +6,7 @@ import "../../../styles/product-details.css";
 import { categoriesKids } from "../../../API/categoriesKids";
 import { categoriesMan } from "../../../API/categoriesMan";
 import { BsLightningFill } from "react-icons/bs";
+import SuggestedProduct from "../../Product/suggestedProduct";
 const WomenDetails = () => {
   const location = useLocation();
   const navigate = useNavigate();
@@ -143,67 +144,7 @@ const WomenDetails = () => {
             </div>
           </div>
         </section>
-        <section className="suggested-content">
-          <h1 className="suggest-title">Suggested Product</h1>
-          <div className="product-grid">
-            {kidsCat &&
-              kidsCat.products &&
-              kidsCat.products.map((product, index) => (
-                <div key={index} className="product-card-clean">
-                  <div
-                    className="product-img-wrapper"
-                    onClick={() => {
-                      handleClickKids(category.category, product.name);
-                    }}
-                  >
-                    <img
-                      src={product.image}
-                      alt={product.name}
-                      className="product-img"
-                    />
-                    {product.sale && (
-                      <span className="tag-badge sale">Sale</span>
-                    )}
-                    {product.bestSeller && (
-                      <span className="tag-badge best">Best Seller</span>
-                    )}
-                  </div>
-                  <div className="product-details">
-                    <h2 className="product-name">{product.name}</h2>
-                    <p className="product-price">₹{product.price}</p>
-                  </div>
-                </div>
-              ))}
-            {manCat &&
-              manCat.products &&
-              manCat.products.map((product, index) => (
-                <div key={index} className="product-card-clean">
-                  <div
-                    className="product-img-wrapper"
-                    onClick={() => {
-                      handleClickMan(category.category, product.name);
-                    }}
-                  >
-                    <img
-                      src={product.image}
-                      alt={product.name}
-                      className="product-img"
-                    />
-                    {product.sale && (
-                      <span className="tag-badge sale">Sale</span>
-                    )}
-                    {product.bestSeller && (
-                      <span className="tag-badge best">Best Seller</span>
-                    )}
-                  </div>
-                  <div className="product-details">
-                    <h2 className="product-name">{product.name}</h2>
-                    <p className="product-price">₹{product.price}</p>
-                  </div>
-                </div>
-              ))}
-          </div>
-        </section>
+        <SuggestedProduct/>
       </div>
     </>
   );
