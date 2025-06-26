@@ -10,85 +10,76 @@ import { FiUser } from "react-icons/fi";
 const Navbar = () => {
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
-  const [isActive, setIsActive] = useState(false);
+  const [isActive, setIsActive] = useState("Home");
+
   const handleClick = (name) => {
     if (name === "cart") navigate("/cart");
     if (name === "profile") navigate("/profile");
   };
+
   return (
-    <>
-      <nav className="navbar-main">
-        <div className="Logo" onClick={() => navigate(CONSTANTS.HOME)}>
-          <img src={logo} alt="Logo" />
-        </div>
-        <div className="icon">
-          {/* Search Bar */}
-          <SearchBar />
+    <nav className="navbar-main">
+      <div className="Logo" onClick={() => navigate(CONSTANTS.HOME)}>
+        <img src={logo} alt="Logo" />
+      </div>
 
-          {/* Hamburger icon for mobile */}
-          <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
+      <div className="icon">
+        <SearchBar />
 
-        {/* Links */}
-        <div className={`nav-links ${menuOpen ? "open" : ""}`}>
-          <Link
-            to={CONSTANTS.HOME}
-            className="links-a"
-            style={isActive === "Home" ? { color: "#0097a7" } : {}}
-            onClick={() => {
-              setMenuOpen(false);
-              setIsActive("Home");
-            }}
-          >
-            Home
-          </Link>
-          <Link
-            className="links-a"
-            to={CONSTANTS.ABOUT}
-            style={isActive === "About" ? { color: "#0097a7" } : {}}
-            onClick={() => {
-              setMenuOpen(false);
-              setIsActive("About");
-            }}
-          >
-            About
-          </Link>
-          <Link
-            className="links-a"
-            to={CONSTANTS.CONTACT}
-            style={isActive === "Contact" ? { color: "#0097a7" } : {}}
-            onClick={() => {
-              setMenuOpen(false);
-              setIsActive("Contact");
-            }}
-          >
-            Contact Us
-          </Link>
-          <Link
-            className="links-a"
-            to={CONSTANTS.LOGIN}
-            style={isActive === "Login" ? { color: "#0097a7" } : {}}
-            onClick={() => {
-              setMenuOpen(false);
-              setIsActive("Login");
-            }}
-          >
-            Login
-          </Link>
+        {/* Hamburger for mobile */}
+        <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+          <span />
+          <span />
+          <span />
         </div>
-        <div className="icon-btn">
-          <IoCartOutline className="btn-nav" onClick={() => handleClick("cart")} />
-          <FiUser className="btn-nav" onClick={() => handleClick("profile")} />
+      </div>
+      {menuOpen && (
+        <div className="overlay" onClick={() => setMenuOpen(false)} />
+      )}
+      {menuOpen && (
+        <div className="mobile-sidebar">
+          <nav className="mobile-nav-links">
+            {["Home", "About", "Contact", "Login"].map((item) => (
+              <Link
+                key={item}
+                to={CONSTANTS[item.toUpperCase()]}
+                className={`links-a ${isActive === item ? "active" : ""}`}
+                onClick={() => {
+                  setMenuOpen(false);
+                  setIsActive(item);
+                }}
+              >
+                {item}
+              </Link>
+            ))}
+          </nav>
         </div>
-        {menuOpen && (
-          <div className="overlay" onClick={() => setMenuOpen(false)} />
-        )}
-      </nav>
-    </>
+      )}
+
+      <div className={`nav-links ${menuOpen ? "open" : ""}`}>
+        {["Home", "About", "Contact", "Login"].map((item) => (
+          <Link
+            key={item}
+            to={CONSTANTS[item.toUpperCase()]}
+            className={`links-a- ${isActive === item ? "active" : ""}`}
+            onClick={() => {
+              setMenuOpen(false);
+              setIsActive(item);
+            }}
+          >
+            {item}
+          </Link>
+        ))}
+      </div>
+
+      <div className="icon-btn">
+        <IoCartOutline
+          className="btn-nav"
+          onClick={() => handleClick("cart")}
+        />
+        <FiUser className="btn-nav" onClick={() => handleClick("profile")} />
+      </div>
+    </nav>
   );
 };
 
