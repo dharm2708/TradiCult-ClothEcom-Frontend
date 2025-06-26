@@ -34,7 +34,7 @@ const initialCartItems = [
     oldPrice: 800,
     discount: "25%",
     bestSeller: false,
-    stock: 25,
+    stock: 0,
     quantity: 1,
   },
 ];

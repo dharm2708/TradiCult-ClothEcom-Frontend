@@ -1,3 +1,6 @@
+* {
+  font-family: monospace;
+}
 .product-section {
   padding: 50px 20px;
   display: flex;
@@ -22,22 +25,22 @@
 }
 
 .product-info {
-  flex: 1;
   display: flex;
   flex-direction: column;
-  min-width: 280px;
+  align-items: flex-start;
+  border-right: 2px solid rgb(209, 206, 206);
+  padding-right: 9%;
 }
-
-.product-info h1 {
+.product-title {
   font-size: 2.5rem;
-  font-weight: 100;
+  font-weight: bold;
+  margin: 0;
 }
 
 .product-price-rating {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  font-family: "Poppins", sans-serif;
 }
 
 .price-group {
@@ -226,6 +229,107 @@ select {
   border-top: 1px solid rgb(135, 133, 133);
 }
 
+.offers {
+  /* display: inline-block; */
+  color: #333;
+  font-weight: bold;
+  padding: 10px 20px;
+  margin: 40px 10px;
+  width: 600px;
+  border-radius: 15px;
+  height: 200px;
+  z-index: 10;
+  justify-items: flex-start;
+  h2 {
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #333;
+  }
+}
+.offer-content {
+  padding-left: 10px;
+  display: grid;
+  margin-right: auto;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: max-content auto;
+  row-gap: 10px;
+  column-gap: 10px;
+  svg {
+    height: 24px;
+    width: 24px;
+  }
+}
+.extra {
+  z-index: 10;
+}
+.deliver-details {
+  display: flex;
+  align-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  margin: 40px 10px;
+  padding: 10px 20px;
+  width: 600px;
+  height: 300px;
+  .deliver-title {
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #333;
+  }
+}
+.offer-info {
+  font-size: 1rem;
+}
+.info-grp {
+  display: flex;
+  gap: 5px;
+  .del-icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+.delivery-time {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  padding-left: 25px;
+  padding-top: 10px;
+  .deliver-time {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+}
+.check-loc {
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
+  input {
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+  }
+  button {
+    display: flex;
+    cursor: pointer;
+    font-size: 1rem;
+    padding-left: 10px;
+  }
+  button:hover {
+    color: #0097a7;
+    transition: 0.3s ease-in-out;
+  }
+}
+.del-info {
+  margin-left: 40px;
+  font-size: 1rem;
+}
 /* ----------------- RESPONSIVE BREAKPOINTS ------------------ */
 @media (max-width: 1024px) {
   .product-details-container {

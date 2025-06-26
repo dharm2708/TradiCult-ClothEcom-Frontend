@@ -50,25 +50,25 @@ const Footer = () => {
               <span>Botad, Gujarat-364710</span>
             </a>
           </div>
-          <div className="credit">
-            &copy; copyright @ {new Date().getFullYear()} by{" "}
-            <span>TradiCult.CO</span> | All Rights Reserved!
-            <div className="box-icon">
-              <Link to={CONSTANTS.CONTACT}>
-                <i className="fab fa-facebook-f"></i>
-              </Link>
-              <Link to={CONSTANTS.CONTACT}>
-                <i className="fab fa-twitter"></i>
-              </Link>
-              <Link to={CONSTANTS.CONTACT}>
-                <i className="fab fa-linkedin"></i>
-              </Link>
-              <Link to={CONSTANTS.CONTACT}>
-                <i className="fab fa-instagram"></i>
-              </Link>
-            </div>
-          </div>
         </section>
+        <div className="credit">
+          &copy; copyright @ {new Date().getFullYear()} by{" "}
+          <span>TradiCult.CO</span> | All Rights Reserved!
+          <div className="box-icon">
+            <Link to={CONSTANTS.CONTACT}>
+              <i className="fab fa-facebook-f"></i>
+            </Link>
+            <Link to={CONSTANTS.CONTACT}>
+              <i className="fab fa-twitter"></i>
+            </Link>
+            <Link to={CONSTANTS.CONTACT}>
+              <i className="fab fa-linkedin"></i>
+            </Link>
+            <Link to={CONSTANTS.CONTACT}>
+              <i className="fab fa-instagram"></i>
+            </Link>
+          </div>
+        </div>
       </footer>
     </>
   );

@@ -2,6 +2,11 @@ import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { categoriesMan } from "../../../API/categoriesMan";
 import { FaCartPlus, FaStar, FaStarHalf } from "react-icons/fa";
+import { BiSolidOffer } from "react-icons/bi";
+import { RiTimerFlashLine } from "react-icons/ri";
+import { TbTruckDelivery } from "react-icons/tb";
+import { LiaShippingFastSolid } from "react-icons/lia";
+
 import { BsLightningFill } from "react-icons/bs";
 import { categoriesKids } from "../../../API/categoriesKids";
 import { categoriesWomen } from "../../../API/categoriesWomen";
@@ -67,7 +72,8 @@ const MenDetails = () => {
 
             {/* Product Info Section */}
             <div className="product-info">
-              <h1>{product.name}</h1>
+              <h1 className="product-title">{product.name}</h1>
+
               <p className="description">{product.description}</p>
 
               <div className="product-price-rating">
@@ -121,7 +127,6 @@ const MenDetails = () => {
                   <strong>Availability:</strong> In Stock
                 </p>
               </div>
-
               <div className="product-details">
                 <h4>Product Details</h4>
                 <div className="sub-content">
@@ -144,6 +149,49 @@ const MenDetails = () => {
                   <h5>Country of Origin</h5>
                   <p>{product.origin}</p>
                 </div>
+              </div>
+            </div>
+          </div>
+          <div className="extra">
+            <div className="offers">
+              <h2>Offers</h2>
+              <div className="offer-content">
+                <BiSolidOffer />
+                <p className="offer-info">
+                  SOS1200 - Extra Rs.1200 Off On Min. Purchase of Rs. 7999
+                </p>
+                <BiSolidOffer />
+                <p className="offer-info">
+                  SOS1200 - Extra Rs.1200 Off On Min. Purchase of Rs. 7999
+                </p>
+                <BiSolidOffer />
+                <p className="offer-info">
+                  SOS1200 - Extra Rs.1200 Off On Min. Purchase of Rs. 7999
+                </p>
+              </div>
+            </div>
+            <div className="deliver-details">
+              <h2 className="deliver-title">Delivery Details</h2>
+              <div className="check-loc">
+                <input type="text" placeholder="Enter Pin Code" />
+                <button>Check</button>
+              </div>
+              <div className="delivery-time">
+                <div className="info-grp">
+                  <RiTimerFlashLine className="del-icon" />
+                  <h2 className="deliver-time">Express Delivery</h2>
+                </div>
+                <p className="del-info">Get Product By Today</p>
+                <div className="info-grp">
+                  <LiaShippingFastSolid className="del-icon" />
+                  <h2 className="deliver-time">Fast Delivery</h2>
+                </div>
+                <p className="del-info">Get Product By Tommorow</p>
+                <div className="info-grp">
+                  <TbTruckDelivery className="del-icon" />
+                  <h2 className="deliver-time">Standard Delivery</h2>
+                </div>
+                <p className="del-info">Get Product By 2 Days</p>
               </div>
             </div>
           </div>
