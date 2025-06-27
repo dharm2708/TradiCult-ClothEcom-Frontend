@@ -120,7 +120,7 @@ const menCategories = [
 const CategoryMen = () => {
   const [id, setId] = useState("");
   const navigate = useNavigate();
-  const handleClick = () => {
+  const handleClickBack = () => {
     return navigate(-1);
   };
   const handleProductClick = (id) => {
@@ -129,11 +129,23 @@ const CategoryMen = () => {
   return (
     <div className="background-blob-wrapper">
       <div className="animated-blobs"></div>
-      <section className="men-categories-section">
+      <span
+        style={{
+          display: "flex",
+          alignItems: "center",
+          cursor: "pointer",
+          width: "100px",
+          fontSize: "1.2rem",
+          margin: "2rem",
+        }}
+        onClick={handleClickBack}
+      >
         <IoChevronBack
-          style={{ fontSize: "2rem", cursor: "pointer" }}
-          onClick={handleClick}
+          style={{ fontSize: "2rem", cursor: "pointer", display: "flex" }}
         />
+        Back
+      </span>
+      <section className="men-categories-section">
         <h1 className="men-categories-heading">Men's Categories</h1>
         <div className="men-categories-grid">
           {menCategories.map((cat, index) => (

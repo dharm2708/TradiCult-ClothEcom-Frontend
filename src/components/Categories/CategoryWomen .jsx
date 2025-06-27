@@ -93,7 +93,7 @@ const WomenCategories = [
 
 const CategoryWomen = () => {
   const navigate = useNavigate();
-  const handleClick = () => {
+  const handleClickBack = () => {
     return navigate(-1);
   };
   const handleProductClick = (id) => {
@@ -102,11 +102,23 @@ const CategoryWomen = () => {
   return (
     <div className="background-blob-wrapper">
       <div className="animated-blobs"></div>
-      <section className="men-categories-section">
+      <span
+        style={{
+          display: "flex",
+          alignItems: "center",
+          cursor: "pointer",
+          width: "100px",
+          fontSize: "1.2rem",
+          margin: "2rem",
+        }}
+        onClick={handleClickBack}
+      >
         <IoChevronBack
-          style={{ fontSize: "2rem", cursor: "pointer" }}
-          onClick={handleClick}
+          style={{ fontSize: "2rem", cursor: "pointer", display: "flex" }}
         />
+        Back
+      </span>
+      <section className="men-categories-section">
         <h1 className="men-categories-heading">Women's Categories</h1>
         <div className="men-categories-grid">
           {WomenCategories.map((cat, index) => (

@@ -37,7 +37,7 @@ const appRoutes = () => {
               <Route path={CONSTANTS.ABOUT} element={<About />} />
               <Route path={CONSTANTS.CONTACT} element={<ContactUs />} />
               <Route path={CONSTANTS.TERMS} element={<TermsConditions />} />
-              <Route path={CONSTANTS.POLICY} element={<PrivacyPolicy />} />s
+              <Route path={CONSTANTS.POLICY} element={<PrivacyPolicy />} />
               <Route path={CONSTANTS.CATEGORY} element={<Category />} />
               <Route path={CONSTANTS.PRODUCTS} element={<ProductPage />} />
               <Route path={CONSTANTS.PRODUCT_DETAILS} element={<Product />} />

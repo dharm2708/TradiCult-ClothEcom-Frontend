@@ -41,12 +41,20 @@ body {
   gap: 40px;
   font-size: 1.4rem;
 }
-.nav-links a:hover {
+.links-a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.links-a:hover {
   color: #0097a7;
 }
-.links-a-active {
-  color: #0097a7;
+
+.active {
+  color: #0097a7 !important;
 }
+
 /* Grouped Search and Icons */
 .icon {
   display: flex;

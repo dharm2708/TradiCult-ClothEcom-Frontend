@@ -1,17 +1,44 @@
-import { categoriesWomen } from "../../../API/categoriesWomen";
-import "../../../styles/productCard.css";
+import React from "react";
+import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import "../../../styles/productCard.css";
+import { IoChevronBack } from "react-icons/io5";
 
-const WomenCloth = ({ categoryId }) => {
+const MenCloth = ({ categoryId }) => {
+  const { products } = useSelector((state) => state.productsData);
   const navigate = useNavigate();
+
+  const categoriesWomen = products.women || [];
   const category = categoriesWomen.find((cat) => cat.id === categoryId);
-  if (!category) return <h2>No Products Found</h2>;
-  const handleClick = (category, name) => {
-    navigate(`/category/women/${category}/${name}`);
+
+  if (!category) return <h2>Category not found</h2>;
+
+  const handleClick = (categoryName, productName) => {
+    navigate(`/category/women/${categoryName}/${productName}`);
   };
+  const handleClickBack = () => {
+    return navigate(-1);
+  };
+
   return (
     <div className="background-blob-wrapper">
       <div className="animated-blobs"></div>
+      <span
+        style={{
+          display: "flex",
+          alignItems: "center",
+          cursor: "pointer",
+          width: "100px",
+          fontSize: "1.2rem",
+          margin: "2rem",
+        }}
+        onClick={handleClickBack}
+      >
+        <IoChevronBack
+          style={{ fontSize: "2rem", cursor: "pointer", display: "flex" }}
+        />
+        Back
+      </span>
       <section className="category-clean">
         <h1 className="category-title">{category.category}</h1>
         <div className="product-grid">
@@ -19,9 +46,7 @@ const WomenCloth = ({ categoryId }) => {
             <div key={index} className="product-card-clean">
               <div
                 className="product-img-wrapper"
-                onClick={() => {
-                  handleClick(category.category, product.name);
-                }}
+                onClick={() => handleClick(category.category, product.name)}
               >
                 <img
                   src={product.image}
@@ -45,4 +70,4 @@ const WomenCloth = ({ categoryId }) => {
   );
 };
 
-export default WomenCloth;
+export default MenCloth;

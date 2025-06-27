@@ -202,13 +202,30 @@
   font-weight: 700;
   cursor: pointer;
   transition: 0.3s ease;
+  z-index: 10;
 }
 
 .checkout-btn:hover {
   background: linear-gradient(to right, #00b894, #00cec9);
   box-shadow: 0 4px 15px rgba(0, 184, 148, 0.3);
 }
-
+.clear-btn {
+  background: linear-gradient(to right, #019073, #01553e);
+  color: white;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 14px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s ease;
+  z-index: 10;
+  justify-self: center;
+}
+.clear-btn:hover {
+  background: linear-gradient(to right, #00b894, #00cec9);
+  box-shadow: 0 4px 15px rgba(0, 184, 148, 0.3);
+}
 @media (max-width: 600px) {
   .cart-wrapper {
     padding: 30px 12px;

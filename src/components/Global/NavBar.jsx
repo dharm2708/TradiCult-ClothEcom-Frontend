@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import "../../styles/navbar.css";
 import logo from "../../assets/images/Logo-main.png";
 import CONSTANTS from "../../Constants/RouteConstants";
@@ -9,8 +9,8 @@ import { FiUser } from "react-icons/fi";
 
 const Navbar = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
-  const [isActive, setIsActive] = useState("Home");
 
   const handleClick = (name) => {
     if (name === "cart") navigate("/cart");
@@ -33,9 +33,11 @@ const Navbar = () => {
           <span />
         </div>
       </div>
+
       {menuOpen && (
         <div className="overlay" onClick={() => setMenuOpen(false)} />
       )}
+
       {menuOpen && (
         <div className="mobile-sidebar">
           <nav className="mobile-nav-links">
@@ -43,11 +45,12 @@ const Navbar = () => {
               <Link
                 key={item}
                 to={CONSTANTS[item.toUpperCase()]}
-                className={`links-a ${isActive === item ? "active" : ""}`}
-                onClick={() => {
-                  setMenuOpen(false);
-                  setIsActive(item);
-                }}
+                className={`links-a ${
+                  location.pathname === CONSTANTS[item.toUpperCase()]
+                    ? "active"
+                    : ""
+                }`}
+                onClick={() => setMenuOpen(false)}
               >
                 {item}
               </Link>
@@ -56,16 +59,17 @@ const Navbar = () => {
         </div>
       )}
 
-      <div className={`nav-links ${menuOpen ? "open" : ""}`}>
+      <div className="nav-links desktop-only">
         {["Home", "About", "Contact", "Login"].map((item) => (
           <Link
             key={item}
             to={CONSTANTS[item.toUpperCase()]}
-            className={`links-a- ${isActive === item ? "active" : ""}`}
-            onClick={() => {
-              setMenuOpen(false);
-              setIsActive(item);
-            }}
+            className={`links-a ${
+              location.pathname === CONSTANTS[item.toUpperCase()]
+                ? "active"
+                : ""
+            }`}
+            onClick={() => setMenuOpen(false)}
           >
             {item}
           </Link>
@@ -77,6 +81,7 @@ const Navbar = () => {
           className="btn-nav"
           onClick={() => handleClick("cart")}
         />
+        <p>(0)</p>
         <FiUser className="btn-nav" onClick={() => handleClick("profile")} />
       </div>
     </nav>
