@@ -2,70 +2,100 @@ import React, { useState } from "react";
 import "../styles/cart.css";
 import "../styles/categoris.css";
 import { useDispatch, useSelector } from "react-redux";
-import { clearCart, removeCart } from "../Redux/Slices/shoppingCartSlices";
+import {
+  clearCart,
+  removeCart,
+  changeQuantity,
+  decQuantity,
+} from "../Redux/Slices/shoppingCartSlices";
+import { useNavigate } from "react-router-dom";
 const Cart = () => {
   const cart = useSelector((state) => state.productsData.cart);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const total = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
+  const handleClickCart = () => {
+    navigate(-1);
+  };
   return (
     <div className="background-blob-wrapper">
       <div className="animated-blobs"></div>
-      <section className="cart-wrapper">
-        <h2 className="cart-title">Your Shopping Cart</h2>
+      <section className="cart-wrapper-elevated">
+        <h2 className="cart-title-elevated">🛒 Your Shopping Cart</h2>
 
-        <div className="cart-container">
+        <div className="cart-items-grid">
           {cart.map((item, index) => (
-            <div className="cart-card" key={index}>
-              <div className="cart-image-wrapper">
-                <img src={item.image} alt={item.name} className="cart-image" />
+            <div className="cart-item-glass" key={index}>
+              <div className="cart-item-left">
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  onClick={() => {
+                    handleClickCart();
+                  }}
+                  className="cart-img"
+                />
                 {item.sale && (
-                  <span className="cart-sale-tag">-{item.discount}</span>
+                  <span className="badge sale">-{item.discount}</span>
                 )}
                 {item.bestSeller && (
-                  <span className="cart-badge">Best Seller</span>
+                  <span className="badge best">Best Seller</span>
                 )}
               </div>
 
-              <div className="cart-info">
-                <h3 className="cart-name">{item.name}</h3>
-                <p className={`cart-stock ${item.stock <= 0 ? "out" : "in"}`}>
+              <div className="cart-item-right">
+                <h3>{item.name}</h3>
+                <p className={`stock ${item.stock <= 0 ? "out" : "in"}`}>
                   {item.stock <= 0 ? "Out of Stock" : "In Stock"}
                 </p>
 
-                <div className="cart-price">
-                  <span className="price-new">₹{item.price}</span>
+                <div className="price-section">
+                  <span className="new-price">₹{item.price}</span>
                   {item.sale && (
-                    <span className="price-old">₹{item.oldPrice}</span>
+                    <span className="old-price">₹{item.oldPrice}</span>
                   )}
                 </div>
 
-                <div className="cart-quantity">
-                  <button>-</button>
+                <div className="qty-controls">
+                  <button onClick={() => dispatch(decQuantity(item.name))}>
+                    -
+                  </button>
                   <span>{item.quantity}</span>
-                  <button>+</button>
+                  <button onClick={() => dispatch(changeQuantity(item.name))}>
+                    +
+                  </button>
                 </div>
 
-                <div className="cart-subtotal">
+                <div className="subtotal">
                   Subtotal: ₹{(item.price * item.quantity).toFixed(2)}
                 </div>
-
-                <button
-                  className="cart-remove"
-                  onClick={() => dispatch(removeCart(item.name))}
-                >
-                  Remove
-                </button>
+                <div className="cart-btn-rem">
+                  <button
+                    className="remove-btn"
+                    onClick={() => dispatch(removeCart(item.name))}
+                  >
+                    ✖ Remove
+                  </button>
+                  <button
+                    className="buy-now-btn"
+                    onClick={() => dispatch(removeCart(item.name))}
+                  >
+                    Buy Now
+                  </button>
+                </div>
               </div>
             </div>
           ))}
         </div>
-        <div className="clear-btn" onClick={() => dispatch(clearCart())}>
-          <button>Clear Cart</button>
-        </div>
 
-        <div className="cart-total-bar">
-          <h3>Total: ₹{total.toFixed(2)}</h3>
-          <button className="checkout-btn">Proceed to Checkout</button>
+        <div className="cart-footer">
+          <div className="clear-cart" onClick={() => dispatch(clearCart())}>
+            <button>🧹 Clear Cart</button>
+          </div>
+          <div className="checkout-bar">
+            <h3>Total: ₹{total.toFixed(2)}</h3>
+            <button className="checkout-btn">🚀 Proceed to Checkout</button>
+          </div>
         </div>
       </section>
     </div>

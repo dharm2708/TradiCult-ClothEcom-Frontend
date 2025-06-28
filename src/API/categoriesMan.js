@@ -5,7 +5,8 @@ const categoriesMan = [
     products: [
       {
         name: "Tee Gallery Printed Pure Cotton Black Tee",
-        image: "https://rukminim1.flixcart.com/image/.../tee-gallery-black.jpg",
+        image:
+          "https://a4aa3904b975ff6161.gradio.live/file=/tmp/fooocus/74c75f357ce47973ff505b77fadb53819fc61be8/2025-06-28_04-22-10_9912.png",
         description:
           "Pure cotton tee with bold abstract print, round neck, classic fit.",
         price: 438,
@@ -17,7 +18,7 @@ const categoriesMan = [
         color: "Black",
         availableSizes: ["S", "M", "L", "XL", "XXL"],
         rating: 4.5,
-        stock: 120,
+        stock: 12,
         review: 56,
         type: "Pure Cotton",
         length: "Standard",
@@ -31,7 +32,7 @@ const categoriesMan = [
       },
       {
         name: "Tee Gallery Printed Pure Cotton Grey Tee",
-        image: "https://rukminim1.flixcart.com/image/.../tee-gallery-grey.jpg",
+        image: "https://m.media-amazon.com/images/I/81VpxqmZhdL._UY1100_.jpg",
         description:
           "Grey pure cotton tee with subtle print, round neck, regular fit.",
         price: 361,
@@ -57,7 +58,8 @@ const categoriesMan = [
       },
       {
         name: "KAJARU Printed Pure Cotton Tee",
-        image: "https://rukminim1.flixcart.com/image/.../kajarutrack.jpg",
+        image:
+          "https://images.meesho.com/images/products/384046012/micjy_512.webp",
         description: "Black and white printed pure cotton round‑neck tee.",
         price: 190,
         sale: true,
@@ -82,7 +84,8 @@ const categoriesMan = [
       },
       {
         name: "URGEAR Solid Pure Cotton Green Tee",
-        image: "https://rukminim1.flixcart.com/image/.../urgeargreen.jpg",
+        image:
+          "https://assets.ajio.com/medias/sys_master/root/20230116/bFsS/63c52af7aeb269c651e1ae23/-1117Wx1400H-469290021-limegreen-MODEL.jpg",
         description:
           "Solid green pure cotton tee with round neck and classic fit.",
         price: 299,
@@ -108,7 +111,8 @@ const categoriesMan = [
       },
       {
         name: "Roadster Solid Pure Cotton Black Tee",
-        image: "https://rukminim1.flixcart.com/image/.../roadster-black.jpg",
+        image:
+          "https://assets.myntassets.com/w_412,q_60,dpr_2,fl_progressive/assets/images/18346830/2022/5/26/cb823ff7-02aa-4d76-b081-6645426c9d991653567130233-Roadster-Men-Tshirts-5481653567129788-1.jpg",
         description: "Classic black pure cotton crew‑neck tee, regular fit.",
         price: 239,
         sale: true,

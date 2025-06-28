@@ -6,10 +6,12 @@ import CONSTANTS from "../../Constants/RouteConstants";
 import SearchBar from "../Home Page/SearchBar";
 import { IoCartOutline } from "react-icons/io5";
 import { FiUser } from "react-icons/fi";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
   const navigate = useNavigate();
   const location = useLocation();
+  const cart = useSelector((state) => state.productsData.cart);
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleClick = (name) => {
@@ -77,11 +79,13 @@ const Navbar = () => {
       </div>
 
       <div className="icon-btn">
-        <IoCartOutline
-          className="btn-nav"
-          onClick={() => handleClick("cart")}
-        />
-        <p>(0)</p>
+        <div className="cart">
+          <span className="cart-count">{cart.length}</span>
+          <IoCartOutline
+            className="btn-nav"
+            onClick={() => handleClick("cart")}
+          />
+        </div>
         <FiUser className="btn-nav" onClick={() => handleClick("profile")} />
       </div>
     </nav>

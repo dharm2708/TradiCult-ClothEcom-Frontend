@@ -31,8 +31,27 @@ const productsSlice = createSlice({
     clearCart: (state) => {
       state.cart = [];
     },
+    changeQuantity: (state, action) => {
+      const item = action.payload;
+      const existingItem = state.cart.find((prod) => prod.name === item);
+      if (existingItem.quantity >= existingItem.stock) {
+        existingItem.quantity = existingItem.stock;
+      } else {
+        existingItem.quantity += 1;
+      }
+    },
+    decQuantity: (state, action) => {
+      const item = action.payload;
+      const existingItem = state.cart.find((prod) => prod.name === item);
+      if (existingItem.quantity <= 1) {
+        state.cart = state.cart.filter((prod) => prod.name !== item);
+      } else {
+        existingItem.quantity -= 1;
+      }
+    },
   },
 });
 
-export const { addToCart, removeCart, clearCart } = productsSlice.actions;
+export const { addToCart, removeCart, clearCart, changeQuantity, decQuantity } =
+  productsSlice.actions;
 export default productsSlice.reducer;
