@@ -1,8 +1,11 @@
+/* ========== BASE STYLES ========== */
 body {
   background-color: #f9f9f9;
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
 }
 
-/* Navbar Container */
+/* ========== NAVBAR ========== */
 .navbar-main {
   display: flex;
   align-items: center;
@@ -16,7 +19,7 @@ body {
   border-radius: 0 0 12px 12px;
 }
 
-/* Logo Styling */
+/* Logo */
 .Logo img {
   height: 60px;
   width: auto;
@@ -28,11 +31,14 @@ body {
 .Logo img:hover {
   transform: scale(1.08);
 }
+
+/* Nav links (desktop only) */
 .nav-links {
   display: flex;
   gap: 40px;
   font-size: 1.4rem;
 }
+
 .links-a {
   text-decoration: none;
   color: #333;
@@ -47,19 +53,93 @@ body {
   color: #0097a7 !important;
 }
 
-/* Grouped Search and Icons */
+/* Icons container */
 .icon {
   display: flex;
   align-items: center;
   gap: 14px;
 }
 
-/* Search bar */
-.search-bar {
-  max-width: 400px;
-  width: 100%;
+/* Search bar container */
+.search-bar-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
 }
 
+/* Search input wrapper - Desktop */
+.search-input-wrapper.desktop {
+  border: 1px solid #00b5b7;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  width: 600px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+.search-input-wrapper input {
+  font-size: 15px;
+  border: none;
+  outline: none;
+  width: 100%;
+  background: transparent;
+}
+
+/* Search Icon */
+.searchBarIcon {
+  cursor: pointer;
+  font-size: 1.8rem;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.searchBarIcon:hover {
+  color: #0097a7;
+}
+
+/* Mobile Search Wrapper */
+.mobile-search {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 16px;
+  background: white;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100vw;
+  z-index: 999;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transform: translateY(-10px);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.mobile-search.active {
+  display: flex;
+  transform: translateY(0);
+  opacity: 1;
+  border: 2px solid #333;
+  border-radius: 20px;
+  margin-top: 50px;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;
+}
+
+/* Cart Icon */
+.cart {
+  display: block;
+  justify-items: center;
+  margin-right: 10px;
+  padding: 0;
+}
+
+/* Icons inside navbar */
 .icon-btn {
   display: flex;
   align-items: center;
@@ -70,14 +150,14 @@ body {
   font-size: 2rem;
   color: #333;
   cursor: pointer;
-  transition: color 0.3s;
+  transition: color 0.3s ease;
 }
 
 .btn-nav:hover {
   color: #0097a7;
 }
 
-/* Hamburger Menu */
+/* Hamburger */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -98,24 +178,13 @@ body {
   border-radius: 2px;
 }
 
-/* Overlay */
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.3);
-  z-index: 999;
-}
-
 /* Sidebar */
 .mobile-sidebar {
   position: fixed;
   top: 0;
   right: 0;
-  width: 50%;
-  max-width: 300px;
+  width: 70%;
+  max-width: 320px;
   height: 100vh;
   background-color: #fff;
   box-shadow: -2px 0 12px rgba(0, 0, 0, 0.2);
@@ -125,37 +194,8 @@ body {
   flex-direction: column;
   animation: slideIn 0.4s ease-in-out forwards;
 }
-/* Show nav-links only on large screens */
-.desktop-only {
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-}
 
-.cart {
-  display: block;
-  justify-items: center;
-  margin-right: 10px;
-  padding: 0px;
-}
-
-@media (max-width: 1024px) {
-  .desktop-only {
-    display: none !important;
-  }
-}
-
-@keyframes slideIn {
-  from {
-    right: -100%;
-    opacity: 0;
-  }
-  to {
-    right: 0;
-    opacity: 1;
-  }
-}
-
+/* Mobile nav links */
 .mobile-nav-links {
   display: flex;
   flex-direction: column;
@@ -178,27 +218,56 @@ body {
   color: #fff;
 }
 
-/* Responsive Adjustments */
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
+
+/* ========== MEDIA QUERIES ========== */
 @media (max-width: 1024px) {
+  .desktop-only,
+  .nav-links,
+  .search-input-wrapper.desktop {
+    display: none !important;
+  }
+
   .hamburger {
     display: flex;
+  }
+
+  .search-bar-container {
+    width: auto;
   }
 
   .search-bar {
     display: none;
   }
-
-  .nav-links {
-    display: none !important;
-  }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .Logo img {
     height: 50px;
   }
 
   .btn-nav {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
+  }
+}
+
+/* Slide In Animation */
+@keyframes slideIn {
+  from {
+    right: -100%;
+    opacity: 0;
+  }
+  to {
+    right: 0;
+    opacity: 1;
   }
 }

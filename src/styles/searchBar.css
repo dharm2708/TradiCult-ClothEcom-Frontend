@@ -1,35 +1,56 @@
 .search-bar-container {
   display: flex;
   align-items: center;
-  margin: 20px;
+  gap: 10px;
+  position: relative;
 }
 
+/* Always visible for large screens */
 .search-input-wrapper {
-  border: 1px solid;
+  border: 1px solid #00b5b7;
   padding: 10px;
-  width: 600px;
-  border-color: #00b5b7;
   border-radius: 10px;
+  display: flex;
+  align-items: center;
+  width: 600px;
+  transition: all 0.3s ease;
+  background-color: white;
 }
 
 .search-input-wrapper input {
   font-size: 15px;
+  border: none;
+  outline: none;
+  width: 100%;
+  background: transparent;
+}
+
+/* Small screen full-width bar (hidden by default) */
+.mobile-search {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 16px;
+  background: white;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100vw;
+  z-index: 999;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* When search is active on mobile */
+.mobile-search.active {
+  display: flex;
 }
 
 .searchBarIcon {
-  margin-left: 10px;
-  display: block;
+  cursor: pointer;
 }
 
-/* Responsive rule to hide input on smaller screens */
 @media (max-width: 768px) {
-  .search-input-wrapper input {
+  .search-input-wrapper.desktop {
     display: none;
-  }
-
-  /* Optional: shrink the wrapper width if needed */
-  .search-input-wrapper {
-    width: auto;
-    padding: 10px;
   }
 }

@@ -1,16 +1,10 @@
-.elevated-categories {
-  padding: 30px 2rem;
-  background: #fff;
-  font-family: "Urbanist", "Poppins", sans-serif;
-}
-
 .elevated-title {
   font-size: 3.5rem;
   text-align: center;
   font-weight: 700;
   color: #111;
-  margin-bottom: 4rem;
-  position: relative;
+  margin-bottom: 1rem;
+  margin-top: 3rem;
   letter-spacing: -1px;
 }
 
@@ -57,8 +51,6 @@
   padding: 1.2rem 1.8rem;
   border-radius: 1rem;
   color: #fff;
-  text-align: left;
-  transition: background 0.3s ease;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -148,9 +140,12 @@
   }
 }
 
+/* ✅ Responsive Media Queries */
+
 @media (max-width: 1024px) {
   .elevated-layout {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
   }
 
   .feature-card.large,
@@ -172,14 +167,9 @@
   .elevated-title {
     font-size: 3rem;
   }
-  .elevated-layout {
-    display: flex;
-    flex-direction: column;
-  }
 
-  .stacked-cards .feature-card {
-    flex: 1 1 100%;
-    height: auto;
+  .men-categories-section {
+    padding: 80px 30px;
   }
 }
 
@@ -196,6 +186,11 @@
 
   .stacked-cards {
     flex-direction: column;
+  }
+
+  .stacked-cards .feature-card {
+    flex: 1 1 100%;
+    height: auto;
   }
 
   .card-content {
@@ -216,39 +211,31 @@
   .men-categories-section {
     padding: 60px 20px;
   }
+}
+
+@media (max-width: 480px) {
+  .elevated-title {
+    font-size: 2rem;
+  }
+
+  .feature-card.large,
+  .feature-card.small {
+    height: 240px;
+  }
+
+  .card-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .card-content p {
+    font-size: 0.8rem;
+  }
+
   .stacked-cards .feature-card {
-    height: auto;
+    flex: 1 1 100%;
   }
 
-  @media (max-width: 480px) {
-    .elevated-title {
-      font-size: 2rem;
-    }
-
-    .feature-card.large,
-    .feature-card.small {
-      height: 240px;
-    }
-
-    .card-content h3 {
-      font-size: 1.2rem;
-    }
-
-    .card-content p {
-      font-size: 0.8rem;
-    }
-
-    .elevated-categories {
-      padding: 3rem 1rem;
-    }
-
-    .stacked-cards .feature-card {
-      flex: 1 1 100%;
-    }
-  }
-  .elevated-layout,
-  .stacked-cards {
-    min-height: 0;
-    height: auto;
+  .elevated-categories {
+    padding: 2rem 1rem;
   }
 }

@@ -1,13 +1,14 @@
-/* imageslider.css */
-
 /* Main Swiper container */
 .mySwiper {
-  height: 700px;
-  margin-left: 20px;
-  margin-right: 20px;
-  border-radius: 30px;
+  width: 100%;
+  max-width: 1670px;
+  height: 70vh;
+  min-height: 300px;
+  margin: 20px auto;
+  border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
 }
 
 /* Ensure images fill the slide */
@@ -40,6 +41,34 @@
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
   color: #ffcc00;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .mySwiper {
+    height: 50vh;
+    border-radius: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mySwiper {
+    height: 40vh;
+    border-radius: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mySwiper {
+    height: 35vh;
+    margin: 10px;
+    border-radius: 12px;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none; /* Optional: hide arrows on very small screens */
+  }
 }
 
 @media (max-width: 768px) {

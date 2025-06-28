@@ -77,7 +77,7 @@ const Cart = () => {
                     ✖ Remove
                   </button>
                   <button
-                    className="buy-now-btn"
+                    className="now-btn"
                     onClick={() => dispatch(removeCart(item.name))}
                   >
                     Buy Now
