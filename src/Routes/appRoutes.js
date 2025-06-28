@@ -5,6 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 import { Route, Routes } from "react-router-dom";
 import CONSTANTS from "../Constants/RouteConstants";
 import Loader from "../components/Global/Loader";
+const Profile = lazy(() => import("../Pages/Profile"));
 const Cart = lazy(() => import("../Pages/Cart"));
 const Product = lazy(() => import("../Pages/Products"));
 const ScrollToTop = lazy(() => import("../components/Home Page/scrollToTop"));
@@ -42,6 +43,7 @@ const appRoutes = () => {
               <Route path={CONSTANTS.PRODUCTS} element={<ProductPage />} />
               <Route path={CONSTANTS.PRODUCT_DETAILS} element={<Product />} />
               <Route path={CONSTANTS.CART} element={<Cart />} />
+              <Route path={CONSTANTS.PROFILE} element={<Profile />} />
             </Route>
             <Route path={CONSTANTS.LOGIN} element={<Login />} />
             <Route path={CONSTANTS.REGISTER} element={<Register />} />

@@ -5,6 +5,7 @@ const CONSTANTS = {
   LOGIN: `/login`,
   REGISTER: `/register`,
   CART: `/cart`,
+  PROFILE: `/profile`,
   FORGOTPASS: `/forgot-password`,
   VERIFY_OTP: `/verify-otp`,
   TERMS: `/terms-conditions`,
