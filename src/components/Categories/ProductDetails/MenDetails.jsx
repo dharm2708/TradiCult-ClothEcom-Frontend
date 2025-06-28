@@ -4,9 +4,6 @@ import { categoriesMan } from "../../../API/categoriesMan";
 import { FaCartPlus, FaStar, FaStarHalf } from "react-icons/fa";
 import { BsLightningFill } from "react-icons/bs";
 import SuggestedProduct from "../../Product/suggestedProduct";
-import { TbTruckDelivery } from "react-icons/tb";
-import { LiaShippingFastSolid } from "react-icons/lia";
-import { RiTimerFlashLine } from "react-icons/ri";
 import { BiSolidOffer } from "react-icons/bi";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../../Redux/Slices/shoppingCartSlices";
@@ -168,6 +165,7 @@ const WomenDetails = () => {
                 SOS1200 - Extra Rs.1200 Off On Min. Purchase of Rs. 7999
               </p>
             </div>
+
           </div>
         </div>
       </section>

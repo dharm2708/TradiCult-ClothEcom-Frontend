@@ -11,7 +11,6 @@ const initialState = {
   },
   cart: [],
 };
-
 const productsSlice = createSlice({
   name: "products",
   initialState,

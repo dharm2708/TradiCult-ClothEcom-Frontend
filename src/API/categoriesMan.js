@@ -6,7 +6,7 @@ const categoriesMan = [
       {
         name: "Tee Gallery Printed Pure Cotton Black Tee",
         image:
-          "https://a4aa3904b975ff6161.gradio.live/file=/tmp/fooocus/74c75f357ce47973ff505b77fadb53819fc61be8/2025-06-28_04-22-10_9912.png",
+          "https://images.meesho.com/images/products/457995882/rwnsq_512.webp",
         description:
           "Pure cotton tee with bold abstract print, round neck, classic fit.",
         price: 438,
@@ -55,6 +55,7 @@ const categoriesMan = [
         genericnam: "printed tee",
         manufacturer: "Tee Gallery",
         origin: "India",
+        sasdf:"asagkcavdfjthe most f the world is shdbboaiht adsln nkkjdsjjsdfdsfkjsdfkj"
       },
       {
         name: "KAJARU Printed Pure Cotton Tee",
@@ -136,8 +137,12 @@ const categoriesMan = [
         origin: "India",
       },
       {
+        name: "askjbdfivuhfvdkfvjhafthek hsad",
+      },
+      {
         name: "Manlino Printed Pure Cotton Black Tee",
-        image: "https://rukminim1.flixcart.com/image/.../manlino-black.jpg",
+        image:
+          "https://rukminim2.flixcart.com/image/300/300/xif0q/t-shirt/d/a/7/3xl-hc-arn-black-30-house-of-common-original-imahckzyfvmrjyau.jpeg",
         description:
           "Pure cotton tee with printed abstract design, regular fit.",
         price: 231,
