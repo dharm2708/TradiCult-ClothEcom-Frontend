@@ -1,5 +1,4 @@
 import tshirt from "../../assets/Cat/Women's/tshirt.svg";
-import bra from "../../assets/Cat/Women's/bra.svg";
 import dress from "../../assets/Cat/Women's/dress.svg";
 import ethnicSets from "../../assets/Cat/Women's/ethnic-sets.svg";
 import jeans from "../../assets/Cat/Women's/jeans.svg";
@@ -10,16 +9,14 @@ import saree from "../../assets/Cat/Women's/saree.svg";
 import shorts from "../../assets/Cat/Women's/shorts.svg";
 import skirts from "../../assets/Cat/Women's/skirts.svg";
 import sleepware from "../../assets/Cat/Women's/sleepware.svg";
-import sportsBra from "../../assets/Cat/Women's/sports-bra.svg";
 import top from "../../assets/Cat/Women's/top.svg";
-import underwear from "../../assets/Cat/Women's/underwear.svg";
 import { useNavigate } from "react-router-dom";
 import { IoChevronBack } from "react-icons/io5";
 
 const WomenCategories = [
   {
     id: 1,
-    name: "T-Shirts Women",
+    name: "T-Shirts",
     icon: tshirt,
     description: "Versatile tees for relaxed, stylish looks.",
   },

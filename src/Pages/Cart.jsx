@@ -10,13 +10,17 @@ import {
 } from "../Redux/Slices/shoppingCartSlices";
 import { useNavigate } from "react-router-dom";
 const Cart = () => {
-  const cart = useSelector((state) => state.productsData.cart);
+  const reduxCart = useSelector((state) => state.productsData.cart);
+  const localCart = localStorage.getItem("cartProduct");
+  const cart = localCart ? JSON.parse(localCart) : reduxCart;
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const total = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
   const handleClickCart = () => {
     navigate(-1);
   };
+
+  console.log(cart);
   return (
     <div className="background-blob-wrapper">
       <div className="animated-blobs"></div>
