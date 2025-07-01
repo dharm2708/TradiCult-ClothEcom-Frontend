@@ -165,7 +165,6 @@ const WomenDetails = () => {
                 SOS1200 - Extra Rs.1200 Off On Min. Purchase of Rs. 7999
               </p>
             </div>
-
           </div>
         </div>
       </section>

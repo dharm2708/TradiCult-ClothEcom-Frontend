@@ -4,9 +4,6 @@ import { categoriesWomen } from "../../../API/categoriesWomen";
 import { FaCartPlus, FaStar, FaStarHalf } from "react-icons/fa";
 import { BsLightningFill } from "react-icons/bs";
 import SuggestedProduct from "../../Product/suggestedProduct";
-import { TbTruckDelivery } from "react-icons/tb";
-import { LiaShippingFastSolid } from "react-icons/lia";
-import { RiTimerFlashLine } from "react-icons/ri";
 import { BiSolidOffer } from "react-icons/bi";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../../Redux/Slices/shoppingCartSlices";
@@ -44,6 +41,7 @@ const WomenDetails = () => {
           fontSize: "1.2rem",
           margin: "2rem",
         }}
+        onClick={handleClickBack}
       >
         <IoChevronBack
           style={{ fontSize: "2rem", cursor: "pointer", display: "flex" }}
