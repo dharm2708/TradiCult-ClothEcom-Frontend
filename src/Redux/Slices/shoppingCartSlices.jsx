@@ -23,14 +23,12 @@ const productsSlice = createSlice({
       } else {
         state.cart.push({ ...item, quantity: 1 });
       }
-      localStorage.setItem("cartProduct", JSON.stringify(state.cart));
     },
     removeCart: (state, action) => {
       state.cart = state.cart.filter((item) => item.name !== action.payload);
     },
     clearCart: (state) => {
       state.cart = [];
-      localStorage.setItem("cartProduct", JSON.stringify(state.cart));
     },
     changeQuantity: (state, action) => {
       const item = action.payload;
